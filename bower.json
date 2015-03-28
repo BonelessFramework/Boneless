@@ -1,0 +1,23 @@
+{
+  "name": "Boneless",
+  "version": "0.0.1",
+  "homepage": "https://github.com/whatsnewsaes/boneless",
+  "authors": [
+    "WhatsNewSaes <scoelen89@gmail.com>"
+  ],
+  "description": "A Community Driven Front-end Framework",
+  "keywords": [
+    "skeleton",
+    "framework",
+    "css",
+    "community"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
