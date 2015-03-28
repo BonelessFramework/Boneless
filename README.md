@@ -1,4 +1,5 @@
 # Boneless
+![Boneless Jelly](images/jelly.png)
 Boneless is a community driven front-end framework takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 
 **Potential direction for Boneless**
