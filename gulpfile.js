@@ -82,5 +82,5 @@ gulp.task('lint', function() {
     .pipe(scsslint({
         'config': 'scsslint.yml',
     }))
-    .pipe(scsslint.failReporter());
+    .pipe(scsslint.failReporter('E'));
 });
