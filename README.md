@@ -29,7 +29,11 @@ Any and all contributions are welcome. We will define guidelines as the communit
   npm install
   ```
 
-* Make your changes and submit your PR
+* Make your changes
+
+* Run `gulp build`
+
+* Make your pull request
 
 ## Contributor list
 (Your name here)
