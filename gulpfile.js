@@ -81,5 +81,6 @@ gulp.task('lint', function() {
   gulp.src('./scss/**/*.scss')
     .pipe(scsslint({
         'config': 'scsslint.yml',
-    }));
+    }))
+    .pipe(scsslint.failReporter());
 });
