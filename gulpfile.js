@@ -7,7 +7,8 @@ var config = {
   paths: {
     boneless: {
       src: './scss/boneless.scss',
-      dest: './lib'
+      dest: './lib',
+      watch: './scss/**/**/*.scss'
     }
   },
   plugins: {
@@ -38,4 +39,8 @@ gulp.task('build', function () {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.paths.boneless.dest));
+});
+
+gulp.task('watch', function() {
+    gulp.watch(config.paths.boneless.watch, ['build']);
 });
