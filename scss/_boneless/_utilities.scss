@@ -1,3 +1,5 @@
+@import "_utilities/placeholders";
+
 // Spacing
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -46,15 +48,6 @@ form {
   float: left;
 }
 
-// Clearing
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// Self Clearing Goodness
-
-.container:after,
-.row:after,
-.u-cf {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix {
+  @extend %clearfix;
 }

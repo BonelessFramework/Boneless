@@ -17,13 +17,5 @@ $font-color: #222 !default;
 // Typography
 $font-family: "Quicksand", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-//Grid Variables
-$container-width: 960px !default;
-$container-width-larger-than-mobile: 85% !default;
-$container-width-larger-than-phablet: 80% !default;
-$total-columns: 12 !default;
-$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
-$column-margin: 4% !default; // space between columns
-
 // Misc
 $global-radius: 4px !default;

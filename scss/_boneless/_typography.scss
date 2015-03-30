@@ -1,25 +1,9 @@
-// Base Styles
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-// NOTE
-// html is set to 62.5% so that all the REM measurements throughout Skeleton
-// are based on 10px sizing. So basically 1.5rem = 15px :)
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: $font-family;
-  color: $font-color;
-}
-
-// Typography
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -46,6 +30,7 @@ p {
   margin-top: 0;
 }
 
+// HR element
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -53,10 +38,7 @@ hr {
   border-top: 1px solid $light-grey;
 }
 
-
 // Links
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
 a {
   color: $link-color;
   &:hover {
@@ -65,8 +47,6 @@ a {
 }
 
 // Lists
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
 ul {
   list-style: circle inside;
 }
@@ -80,14 +60,16 @@ ol {
 ul {
   padding-left: 0;
   margin-top: 0;
-  ul, ol {
+  ul,
+  ol {
     margin: 1.5rem 0 1.5rem 3rem;
     font-size: 90%;
   }
 }
 
 ol {
-  ol, ul {
+  ol,
+  ul {
     margin: 1.5rem 0 1.5rem 3rem;
     font-size: 90%;
   }
@@ -97,9 +79,7 @@ li {
   margin-bottom: 1rem;
 }
 
-// Code
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
+// Styles for code
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
@@ -116,9 +96,7 @@ pre > code {
   white-space: pre;
 }
 
-// Tables
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
+// Table Styles
 th,
 td {
   padding: 12px 15px;

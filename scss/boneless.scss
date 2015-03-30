@@ -20,10 +20,16 @@
 @import "_boneless/config";
 @import "_boneless/_utilities/_mixins";
 
+// Base
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import "_boneless/base";
+
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import "_boneless/grid";
+//TODO: Take Sparkplug grid and sassify
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -47,11 +53,6 @@
 
 // Media Queries
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// Note: The best way to structure the use of media queries is to create the queries
-// near the relevant code. For example, if you wanted to change the styles for buttons
-// on small devices, paste the mobile query code up in the buttons section and style it
-// there.
 
 // Larger than mobile
 @include bp($bp-larger-than-mobile) {}
