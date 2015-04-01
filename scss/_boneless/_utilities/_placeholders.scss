@@ -1,7 +1,7 @@
 /// placeholder for clearfix
 /// @name clearfix
 /// @author Benjamin Hinchley
-/// @group utilities
+/// @group utility
 /// @access public
 /// @example
 ///   .thing-you-want-to-add-the-clearfix-to {
@@ -10,8 +10,8 @@
 
 %clearfix {
   &:after {
-    content: "";
-    display: table;
     clear: both;
+    content: '';
+    display: table;
   }
 }

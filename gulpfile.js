@@ -26,9 +26,13 @@ var config = {
         sassdoc: {
             options: {
                 dest: 'docs',
+                basePath: 'https://github.com/whatsnewsaes/Boneless/tree/master/scss',
                 groups: {
-                    utilities: 'Utility',
+                    utility: 'Utility',
                     config: 'Configuration'
+                },
+                display: {
+                    access: 'public'
                 }
             }
         }
