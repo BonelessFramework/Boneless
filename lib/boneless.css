@@ -48,20 +48,6 @@ body {
   margin-bottom: 0;
   max-width: none; }
 
-@media only screen and (min-width: 48em) {
-  .row {
-    max-width: 48em; }
-  .columns .columns, .column .column {
-    padding-left: 0;
-    padding-right: 1em; } }
-
-@media only screen and (min-width: 62.5em) {
-  .row {
-    max-width: 75em; }
-  .columns .columns, .column .column {
-    padding-left: 0;
-    padding-right: 1em; } }
-
 @media only screen {
   .column.small-centered, .columns.small-centered {
     margin-left: auto;
@@ -221,6 +207,11 @@ body {
     right: auto; } }
 
 @media only screen and (min-width: 48em) {
+  .row {
+    max-width: 48em; }
+  .columns .columns, .column .column {
+    padding-left: 0;
+    padding-right: 1em; }
   .column.medium-centered, .columns.medium-centered {
     margin-left: auto;
     margin-right: auto;
@@ -379,6 +370,11 @@ body {
     right: auto; } }
 
 @media only screen and (min-width: 62.5em) {
+  .row {
+    max-width: 75em; }
+  .columns .columns, .column .column {
+    padding-left: 0;
+    padding-right: 1em; }
   .column.large-centered, .columns.large-centered {
     margin-left: auto;
     margin-right: auto;
