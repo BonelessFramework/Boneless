@@ -1,15 +1,9 @@
 var gulp = require('gulp'),
-<<<<<<< HEAD
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    sassdoc = require('sassdoc');
-=======
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  autoprefixer = require('gulp-autoprefixer'),
-  scsslint = require('gulp-scss-lint');
->>>>>>> Add scss-lint
+    sassdoc = require('sassdoc'),
+    scsslint = require('gulp-scss-lint');
 
 var config = {
     paths: {
@@ -78,9 +72,9 @@ gulp.task('watch-docs', function() {
 });
 
 gulp.task('lint', function() {
-  gulp.src('./scss/**/*.scss')
-    .pipe(scsslint({
-        'config': 'scsslint.yml',
-    }))
-    .pipe(scsslint.failReporter('E'));
+    gulp.src('./scss/**/*.scss')
+        .pipe(scsslint({
+            'config': 'scsslint.yml',
+        }))
+        .pipe(scsslint.failReporter('E'));
 });
