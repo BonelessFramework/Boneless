@@ -1,3 +1,13 @@
+/// placeholder for clearfix
+/// @name clearfix
+/// @author Benjamin Hinchley
+/// @group utilities
+/// @access public
+/// @example
+///   .thing-you-want-to-add-the-clearfix-to {
+///     @extend %clearfix;
+///   }
+
 %clearfix {
   &:after {
     content: "";

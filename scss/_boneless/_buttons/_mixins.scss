@@ -1,4 +1,18 @@
 // Standard Button mixin definition
+
+/// Used to create button styles
+/// @name button
+/// @arg {string} $classname [btn] - classname of button styles
+/// @arg {string} $size [medium] - size of button can be medium or large
+/// @arg {color} $color [#888] - color of button
+/// @arg {string} $type [border] - style of button, border or solid
+/// @output button styles defined by args passed in
+/// @access public
+/// @author Benjamin Hinchley
+///
+/// @example button mixin usage
+///   @include button($classname: 'button', $color: #999);
+
 @mixin button($classname: btn, $size: medium, $color: #888, $type: border) {
   .#{$classname} {
     // Every button
