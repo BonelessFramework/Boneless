@@ -13,30 +13,17 @@ $total-columns: 12;
 /// @type number
 $column-gutter: 2em;
 
-// Media Queries
-
-/// Large media query
-/// @type number
+// Size declerations
 $large-up: 62.5em;
-
-/// Medium media query
-/// @type number
 $medium-up: 48em;
-
-/// Small media query
-/// @type number
 $small-up: 30em;
 
-// Breakpoints
-
-/// Large row breakpoint
-/// @type number
+// Row Max Widths
 $large-row-width: $row-width;
-
-/// Medium row breakpoint
-/// @type number
 $medium-row-width: $medium-up;
-
-/// Small row breakpoint
-/// @type number
 $small-row-width: $small-up;
+
+// Media Queries
+$bp-grid-large: 'only screen and (min-width: #{$large-up})';
+$bp-grid-medium: 'only screen and (min-width: #{$medium-up})';
+$bp-grid-small: 'only screen';

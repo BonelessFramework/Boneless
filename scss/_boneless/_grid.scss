@@ -47,36 +47,7 @@
 	max-width: none;
 }
 
-
-@media only screen and (min-width: $medium-up) {
-	.row{
-		max-width:$medium-row-width;
-
-	}
-	.columns .columns,
-	.column .column{
-		padding-left:0;
-		padding-right:$column-gutter / 2;
-	}
-}
-
-
-@media only screen and (min-width: $large-up) {
-
-	.row{
-		max-width:$large-row-width;
-
-	}
-
-	.columns .columns,
-	.column .column{
-		padding-left:0;
-		padding-right:$column-gutter / 2;
-	}
-
-}
-
-@media only screen {
+@include bp($bp-grid-small) {
 
 	.column.small-centered,
 	.columns.small-centered {
@@ -102,15 +73,24 @@
 		float: left;
 	}
 
-	@include _gen-sml-cols($total-columns);
-	@include _gen-sml-offset-cols($total-columns);
-	@include _gen-sml-pull-cols($total-columns);
-	@include _gen-sml-push-cols($total-columns);
+	@include gen-sml-cols($total-columns);
+	@include gen-sml-offset-cols($total-columns);
+	@include gen-sml-pull-cols($total-columns);
+	@include gen-sml-push-cols($total-columns);
 }
 
 
 
-@media only screen and (min-width: $medium-up) {
+@include bp($bp-grid-medium) {
+	.row{
+		max-width:$medium-row-width;
+
+	}
+	.columns .columns,
+	.column .column{
+		padding-left:0;
+		padding-right:$column-gutter / 2;
+	}
 
 	.column.medium-centered,
 	.columns.medium-centered {
@@ -136,15 +116,27 @@
 		float: left;
 	}
 
-	@include _gen-md-cols($total-columns);
-	@include _gen-md-offset-cols($total-columns);
-	@include _gen-md-pull-cols($total-columns);
-	@include _gen-md-push-cols($total-columns);
+	@include gen-md-cols($total-columns);
+	@include gen-md-offset-cols($total-columns);
+	@include gen-md-pull-cols($total-columns);
+	@include gen-md-push-cols($total-columns);
 
 }
 
 
-@media only screen and (min-width: $large-up) {
+@include bp($bp-grid-large) {
+
+	.row{
+		max-width:$large-row-width;
+
+	}
+
+	.columns .columns,
+	.column .column{
+		padding-left:0;
+		padding-right:$column-gutter / 2;
+	}
+
 	.column.large-centered,
 	.columns.large-centered {
 		margin-left: auto;
@@ -169,9 +161,9 @@
 		float: left;
 	}
 
-	@include _gen-lg-cols($total-columns);
-	@include _gen-lg-offset-cols($total-columns);
-	@include _gen-lg-pull-cols($total-columns);
-	@include _gen-lg-push-cols($total-columns);
+	@include gen-lg-cols($total-columns);
+	@include gen-lg-offset-cols($total-columns);
+	@include gen-lg-pull-cols($total-columns);
+	@include gen-lg-push-cols($total-columns);
 
 }

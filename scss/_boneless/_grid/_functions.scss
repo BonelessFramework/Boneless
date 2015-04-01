@@ -1,12 +1,12 @@
 ////
 /// @group grid
-/// @author Seth Coelen
-/// @access public
 ////
 
-/// Colomn width calc
+/// Column width calculation
 /// @arg {number} $n - column number
 /// @arg {number} $t-col - total columns in grid
-@function col-width($n, $t-col) {
-  @return ($i/$t-col*100%);
+/// @author Benjamin Hinchley
+/// @access private
+@function _col-width($n, $t-col) {
+  @return ($n/$t-col*100%);
 }
