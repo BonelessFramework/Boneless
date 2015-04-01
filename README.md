@@ -15,7 +15,7 @@ To use Boneless simply download the zip, clone the repo or install through bower
 ## Contribution guidelines
 Any and all contributions are welcome. We will define guidelines as the community grows
 
-### To contribute there is a tiny, little bit of setup involved
+#### To contribute there is a tiny, little bit of setup involved
 
 * Download and install npm. The easiest way to do this is to just install node. Which can be done [here](https://nodejs.org/download/).
 * Install [gulp.js](http://gulpjs.com) `npm install -g gulp`
@@ -24,7 +24,7 @@ Any and all contributions are welcome. We will define guidelines as the communit
 
 * Navigate into the project folder and install dependencies via npm.
 
-  ```
+  ```shell
   cd boneless
   npm install
   ```
@@ -34,6 +34,28 @@ Any and all contributions are welcome. We will define guidelines as the communit
 * Run `gulp build`
 
 * Make your pull request
+
+### Helping out with the documentation
+We are using [SassDoc](http://sassdoc.com/) to generate our documentation, which works much like JSDoc, KSS etc.
+
+There are a few gulp tasks that make it easy to generate the docs, the main one being `gulp docs` which runs the sassdoc task and regenerates the documentation. There is also a watch task `gulp watch-docs` for the awesome people going through and helping out with a lot of the documentation.
+
+An example of the documentation added for the clearfix placeholder.
+```scss
+/// placeholder for clearfix
+/// @name clearfix
+/// @author Benjamin Hinchley
+/// @group utility
+/// @access public
+/// @example
+///   .thing-you-want-to-add-the-clearfix-to {
+///     @extend %clearfix;
+///   }
+```
+
+For a full list of the annotations that can be used can be found here -> [SassDoc Annotations](http://sassdoc.com/annotations/)
+
+After you have made changes to the documentation, create a PR and start the title of the PR with `documentation (add | fix | update | extend):` and then whatever part that you added/fixed/updated/extended. For example, if you were to update the documentation for the clearfix placeholder, the title of the PR would be `documentation update: clearfix`
 
 ## Contributor list
 (Your name here)
