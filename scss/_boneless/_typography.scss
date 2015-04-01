@@ -17,7 +17,7 @@ h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
 
 // Larger than phablet
-@media (#{$bp-larger-than-phablet}) {
+@include bp($bp-larger-than-phablet) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }

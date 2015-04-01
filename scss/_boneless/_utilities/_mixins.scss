@@ -6,6 +6,7 @@
 /// @access public
 /// @author Benjamin Hinchley
 /// @group utility
+/// @todo This needs a lot of work to make it more robust
 ///
 /// @example breakpoint mixin usage
 ///   .thing {
@@ -16,7 +17,7 @@
 ///   }
 
 @mixin bp($breakpoint-name) {
-  @media (#{$breakpoint-name}) {
+  @media #{$breakpoint-name} {
     @content;
   }
 }
