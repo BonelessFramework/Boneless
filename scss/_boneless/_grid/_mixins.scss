@@ -1,0 +1,169 @@
+////
+/// @group grid
+/// @author Seth Coelen
+/// @access public
+////
+
+// ---------------------------------------------------------
+//     Large Column Mixins
+// ---------------------------------------------------------
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+@mixin _gen-lg-cols($total-columns) {
+  @for $i from 1 through $total-columns {
+    .large-#{$i} {
+      width: col-width($i,$total-columns);
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [offset] - class prefix for offset
+@mixin _gen-lg-offset-cols($total-columns, $prefix: offset) {
+  @for $i from 1 through $total-columns {
+    .large-#{$prefix}-#{$i} {
+      margin-left: col-width($i,$total-columns) !important;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [pull] - class prefix for pull
+@mixin _gen-lg-pull-cols($total-columns, $prefix: pull) {
+  @for $i from 1 through $total-columns {
+    .large-#{$prefix}-#{$i} {
+      position: relative;
+      right: col-width($i,$total-columns);
+      left: auto;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [push] - class prefix for push
+@mixin _gen-lg-push-cols($total-columns, $prefix: push) {
+  @for $i from 1 through $total-columns {
+    .large-#{$prefix}-#{$i} {
+      position: relative;
+      left: col-width($i,$total-columns);
+      right: auto;
+    }
+  }
+}
+
+// ---------------------------------------------------------
+//     Medium Column Mixins
+// ---------------------------------------------------------
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+@mixin _gen-md-cols($total-columns) {
+  @for $i from 1 through $total-columns {
+    .medium-#{$i} {
+      width: col-width($i,$total-columns);
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [offset] - class prefix for offset
+@mixin _gen-md-offset-cols($total-columns, $prefix: offset) {
+  @for $i from 1 through $total-columns {
+    .medium-#{$prefix}-#{$i} {
+      margin-left: col-width($i,$total-columns) !important;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [pull] - class prefix for pull
+@mixin _gen-md-pull-cols($total-columns, $prefix: pull) {
+  @for $i from 1 through $total-columns {
+    .medium-#{$prefix}-#{$i} {
+      position: relative;
+      right: col-width($i,$total-columns);
+      left: auto;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [push] - class prefix for push
+@mixin _gen-md-push-cols($total-columns, $prefix: push) {
+  @for $i from 1 through $total-columns {
+    .medium-#{$prefix}-#{$i} {
+      position: relative;
+      left: col-width($i,$total-columns);
+      right: auto;
+    }
+  }
+}
+
+// ---------------------------------------------------------
+//     Small Column Mixins
+// ---------------------------------------------------------
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+@mixin _gen-sml-cols($total-columns) {
+  @for $i from 1 through $total-columns {
+    .small-#{$i} {
+      width: col-width($i,$total-columns);
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [offset] - class prefix for offset
+@mixin _gen-sml-offset-cols($total-columns, $prefix: offset) {
+  @for $i from 1 through $total-columns {
+    .small-#{$prefix}-#{$i} {
+      margin-left: col-width($i,$total-columns) !important;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [pull] - class prefix for pull
+@mixin _gen-sml-pull-cols($total-columns, $prefix: pull) {
+  @for $i from 1 through $total-columns {
+    .small-#{$prefix}-#{$i} {
+      position: relative;
+      right: col-width($i,$total-columns);
+      left: auto;
+    }
+  }
+}
+
+
+///
+/// @arg {number} $total-columns - total number of columns in grid
+/// @arg {string} $prefix [push] - class prefix for push
+@mixin _gen-sml-push-cols($total-columns, $prefix: push) {
+  @for $i from 1 through $total-columns {
+    .small-#{$prefix}-#{$i} {
+      position: relative;
+      left: col-width($i,$total-columns);
+      right: auto;
+    }
+  }
+}

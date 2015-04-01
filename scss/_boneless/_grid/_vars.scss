@@ -1,1 +1,42 @@
+////
+/// @group grid
+/// @author Seth Coelen
+/// @access public
+////
 
+// Columns
+
+/// @type number
+$row-width: 75em;
+/// @type number
+$total-columns: 12;
+/// @type number
+$column-gutter: 2em;
+
+// Media Queries
+
+/// Large media query
+/// @type number
+$large-up: 62.5em;
+
+/// Medium media query
+/// @type number
+$medium-up: 48em;
+
+/// Small media query
+/// @type number
+$small-up: 30em;
+
+// Breakpoints
+
+/// Large row breakpoint
+/// @type number
+$large-row-width: $row-width;
+
+/// Medium row breakpoint
+/// @type number
+$medium-row-width: $medium-up;
+
+/// Small row breakpoint
+/// @type number
+$small-row-width: $small-up;
