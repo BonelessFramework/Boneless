@@ -1,8 +1,23 @@
 // Breakpoints
+
+/// breakpoint set at min-width: 400px
+/// @group config
 $bp-larger-than-mobile    : "min-width: 400px" !default;
+
+/// breakpoint set at min-width: 550px
+/// @group config
 $bp-larger-than-phablet   : "min-width: 550px" !default;
+
+/// breakpoint set at min-width: 750px
+/// @group config
 $bp-larger-than-tablet    : "min-width: 750px" !default;
+
+/// breakpoint set at min-width: 1000px
+/// @group config
 $bp-larger-than-desktop   : "min-width: 1000px" !default;
+
+/// breakpoint set at min-width: 1200px
+/// @group config
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Colors
