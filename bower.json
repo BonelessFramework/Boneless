@@ -24,5 +24,8 @@
   ],
   "Dependencies": {
     "normalize.css": "~3.0.2"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.5.0"
   }
 }
