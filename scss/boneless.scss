@@ -18,7 +18,6 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import "_boneless/config";
-@import "_boneless/_utilities/_mixins";
 
 // Base
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -29,7 +28,6 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import "_boneless/grid";
-//TODO: Take Sparkplug grid and sassify
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -55,16 +53,16 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Larger than mobile
-@include bp($bp-larger-than-mobile) {}
+@include breakpoint($bp-larger-than-mobile) {}
 
 // Larger than phablet (also point when grid becomes active)
-@include bp($bp-larger-than-phablet) {}
+@include breakpoint($bp-larger-than-phablet) {}
 
 // Larger than tablet
-@include bp($bp-larger-than-tablet) {}
+@include breakpoint($bp-larger-than-tablet) {}
 
 // Larger than desktop
-@include bp($bp-larger-than-desktop) {}
+@include breakpoint($bp-larger-than-desktop) {}
 
 // Larger than Desktop HD
-@include bp($bp-larger-than-desktophd) {}
+@include breakpoint($bp-larger-than-desktophd) {}
