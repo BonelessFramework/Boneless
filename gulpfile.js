@@ -29,7 +29,8 @@ var config = {
                 basePath: 'https://github.com/whatsnewsaes/Boneless/tree/master/scss',
                 groups: {
                     utility: 'Utility',
-                    config: 'Configuration'
+                    config: 'Configuration',
+                    grid: 'Grid'
                 },
                 display: {
                     access: 'public'
@@ -66,5 +67,5 @@ gulp.task('docs', function() {
 });
 
 gulp.task('watch-docs', function() {
-    gulp.watch(config.paths.boneless.docs, ['docs']);
+    gulp.watch(config.paths.boneless.docs, ['build','docs']);
 });

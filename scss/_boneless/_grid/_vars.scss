@@ -1,1 +1,29 @@
+////
+/// @group grid
+/// @author Seth Coelen
+/// @access public
+////
 
+// Columns
+
+/// @type number
+$row-width: 75em;
+/// @type number
+$total-columns: 12;
+/// @type number
+$column-gutter: 2em;
+
+// Size declerations
+$large-up: 62.5em;
+$medium-up: 48em;
+$small-up: 30em;
+
+// Row Max Widths
+$large-row-width: $row-width;
+$medium-row-width: $medium-up;
+$small-row-width: $small-up;
+
+// Media Queries
+$bp-grid-large: 'only screen and (min-width: #{$large-up})';
+$bp-grid-medium: 'only screen and (min-width: #{$medium-up})';
+$bp-grid-small: 'only screen';
