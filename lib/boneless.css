@@ -3,6 +3,12 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
+/* // Device 
+$bp-larger-than-mobile    : '(min-width: 400px)' !default;
+$bp-larger-than-phablet   : '(min-width: 550px)' !default;
+$bp-larger-than-tablet    : '(min-width: 750px)' !default;
+$bp-larger-than-desktop   : '(min-width: 1000px)' !default;
+$bp-larger-than-desktophd : '(min-width: 1200px)' !default; */
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -567,7 +573,7 @@ h6 {
   line-height: 1.6;
   letter-spacing: 0; }
 
-@media (min-width: 550px) {
+@media (min-width:550px) {
   h1 {
     font-size: 5rem; }
   h2 {

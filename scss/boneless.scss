@@ -29,7 +29,6 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import "_boneless/grid";
-//TODO: Take Sparkplug grid and sassify
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -50,21 +49,3 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import "_boneless/utilities";
-
-// Media Queries
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// Larger than mobile
-@include bp($bp-larger-than-mobile) {}
-
-// Larger than phablet (also point when grid becomes active)
-@include bp($bp-larger-than-phablet) {}
-
-// Larger than tablet
-@include bp($bp-larger-than-tablet) {}
-
-// Larger than desktop
-@include bp($bp-larger-than-desktop) {}
-
-// Larger than Desktop HD
-@include bp($bp-larger-than-desktophd) {}
