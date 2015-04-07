@@ -695,6 +695,29 @@ th:last-child, td:last-child {
   color: #0d89b0;
   border-color: #0f9cc8; }
 
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 30px;
+  font-size: 11px;
+  height: 38px;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  border: 1px solid #6e6e6e;
+  color: #555; }
+button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
+  outline: 0;
+  color: #222222;
+  border-color: #2f2f2f; }
+
 textarea, select {
   height: 38px;
   padding: 6px 10px;

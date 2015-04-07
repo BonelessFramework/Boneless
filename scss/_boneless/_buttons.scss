@@ -4,3 +4,10 @@
 @include button($classname: 'button-primary', $color: $primary-color);
 
 // TODO: Think about adding styles for input types submit, reset & button
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  @include buttonStyles($color: $secondary-color);
+}
