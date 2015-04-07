@@ -3,12 +3,11 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-/* // Device 
-$bp-larger-than-mobile    : '(min-width: 400px)' !default;
-$bp-larger-than-phablet   : '(min-width: 550px)' !default;
-$bp-larger-than-tablet    : '(min-width: 750px)' !default;
-$bp-larger-than-desktop   : '(min-width: 1000px)' !default;
-$bp-larger-than-desktophd : '(min-width: 1200px)' !default; */
+/**
+* Color definitions from
+* mrmrs - clrs
+* http://clrs.cc/
+*/
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -573,7 +572,7 @@ h6 {
   line-height: 1.6;
   letter-spacing: 0; }
 
-@media (min-width:550px) {
+@media only screen and (min-width: 48em) {
   h1 {
     font-size: 5rem; }
   h2 {
@@ -594,7 +593,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #e1e1e1; }
+  border-top: 1px solid #ddd; }
 
 a {
   color: #1eaedb; }
@@ -628,8 +627,8 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
+  background: #ededed;
+  border: 1px solid #ddd;
   border-radius: 4px; }
 
 pre > code {
@@ -640,7 +639,7 @@ pre > code {
 th, td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e1e1e1; }
+  border-bottom: 1px solid #ddd; }
 
 th:first-child, td:first-child {
   padding-left: 0; }
@@ -664,8 +663,8 @@ th:last-child, td:last-child {
   height: 38px;
   line-height: 38px;
   letter-spacing: .1rem;
-  border: 1px solid #6f6f6f;
-  color: #555555; }
+  border: 1px solid #6e6e6e;
+  color: #555; }
 
 .button:hover, .button:focus {
   outline: 0;
@@ -700,7 +699,7 @@ textarea, select {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
-  border: 1px solid #d1d1d1;
+  border: 1px solid silver;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -713,7 +712,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
-  border: 1px solid #d1d1d1;
+  border: 1px solid silver;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }

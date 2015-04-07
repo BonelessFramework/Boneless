@@ -87,7 +87,7 @@ code {
   white-space: nowrap;
   background: lighten($light-grey, 6.4%);
   border: 1px solid $light-grey;
-  border-radius: $global-radius;
+  border-radius: 4px;
 }
 
 pre > code {
