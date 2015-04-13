@@ -4,20 +4,25 @@
 /// @arg {string} $size [medium] - size of button can be small, medium or large
 /// @arg {color} $color [#888] - color of button
 /// @arg {string} $type [border] - style of button can be border or solid
-/// @output button styles defined by args passed in
+/// @arg {boolean | number} $rounded [true] - to declare whether the button has rounded corners, if a number is passed corners are rounded by that amount (number must be a px value)
+///
 /// @access public
 /// @author Benjamin Hinchley
 ///
-/// @example button mixin usage
+/// @example scss Example mixin usage
 ///   @include button($classname: 'button', $color: #999);
 ///
-/// @example button mixin usage for button, input type
+/// @example scss Usage of mixin to style button and input[type="submit"] elements
 ///   button,
 ///   input[type="submit"] {
 ///     @include button($classname: false, $color: #999);
 ///   }
+///
+/// @example scss Usage of mixin creating rectangular buttons
+///   @include button($classname: button-flat, $color: #2ecc40, $rounded: false);
+///
 
-@mixin button($classname: btn, $size: medium, $color: #888, $type: border) {
+@mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
   @if $classname == false {
     $output: '&';
   } @else {
@@ -33,7 +38,6 @@
     text-decoration: none;
     white-space: nowrap;
     background-color: transparent;
-    border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box;
     letter-spacing: .1rem;
@@ -65,6 +69,16 @@
         background-color: $color;
         color: lighten($color, 100%);
     }
+
+    // Rounded
+    @if $rounded == true {
+      border-radius: 4px;
+    } @else if $rounded == false {
+      border-radius: 0;
+    } @else if unit($rounded) == px {
+      border-radius: $rounded;
+    }
+
   }
 
   // Hover State
@@ -79,6 +93,7 @@
       color: darken($color, 20%);
       border-color: darken($color, 15%);
     }
+
   }
 
 }
