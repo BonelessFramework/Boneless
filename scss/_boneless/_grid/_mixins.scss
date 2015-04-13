@@ -9,10 +9,10 @@
 /// @name gen-cols
 /// @arg {number} $total-columns - total number of columns in grid
 /// @arg {string} $name - name of grid
-/// @example scss Basic mixin usage
+/// @example scss
 ///   @include gen-cols(12, small);
 ///   @include gen-cols($total-columns: 12, $name: medium);
-/// @example scss Realworld mixin usage
+/// @example scss Mixin usage
 ///   @include($bp-grid-small) {
 ///   	@include gen-cols($total-columns, $name: small);
 ///   }
