@@ -73,10 +73,10 @@
 		float: left;
 	}
 
-	@include gen-sml-cols($total-columns);
-	@include gen-sml-offset-cols($total-columns);
-	@include gen-sml-pull-cols($total-columns);
-	@include gen-sml-push-cols($total-columns);
+	@include gen-cols($total-columns, $name: small);
+	@include gen-offset-cols($total-columns, $name: small, $prefix: offset);
+	@include gen-offset-cols($total-columns, $name: small, $prefix: push);
+	@include gen-offset-cols($total-columns, $name: small, $prefix: pull);
 }
 
 
@@ -116,10 +116,10 @@
 		float: left;
 	}
 
-	@include gen-md-cols($total-columns);
-	@include gen-md-offset-cols($total-columns);
-	@include gen-md-pull-cols($total-columns);
-	@include gen-md-push-cols($total-columns);
+	@include gen-cols($total-columns, $name: medium);
+	@include gen-offset-cols($total-columns, $name: medium, $prefix: offset);
+	@include gen-offset-cols($total-columns, $name: medium, $prefix: push);
+	@include gen-offset-cols($total-columns, $name: medium, $prefix: pull);
 
 }
 
@@ -161,9 +161,9 @@
 		float: left;
 	}
 
-	@include gen-lg-cols($total-columns);
-	@include gen-lg-offset-cols($total-columns);
-	@include gen-lg-pull-cols($total-columns);
-	@include gen-lg-push-cols($total-columns);
+	@include gen-cols($total-columns, $name: large);
+	@include gen-offset-cols($total-columns, $name: large, $prefix: offset);
+	@include gen-offset-cols($total-columns, $name: large, $prefix: push);
+	@include gen-offset-cols($total-columns, $name: large, $prefix: pull);
 
 }
