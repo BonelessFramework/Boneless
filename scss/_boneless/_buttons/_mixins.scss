@@ -3,8 +3,8 @@
 /// @arg {string} $classname [btn] - classname of button styles
 /// @arg {string} $size [medium] - size of button can be small, medium or large
 /// @arg {color} $color [#888] - color of button
-/// @arg {string} $type [border] - style of button can be border or solid
-/// @arg {boolean | number} $rounded [true] - to declare whether the button has rounded corners, if a number is passed corners are rounded by that amount (number must be a px value)
+/// @arg {string} $type [border] - style of button can be border, solid
+/// @arg {boolean | number | string} $rounded [true] - to declare whether the button has rounded corners, if a number is passed corners are rounded by that amount (number must be a px value), if the word 'pill' is passed creates a pill style button
 ///
 /// @access public
 /// @author Benjamin Hinchley
@@ -20,6 +20,9 @@
 ///
 /// @example scss Usage of mixin creating rectangular buttons
 ///   @include button($classname: button-flat, $color: #2ecc40, $rounded: false);
+///
+/// @example scss Usage of mixin creating pill style buttons
+///   @include button($classname: button-pill, $color: #39cccc, $rounded: pill);
 ///
 
 @mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
@@ -75,6 +78,8 @@
       border-radius: 4px;
     } @else if $rounded == false {
       border-radius: 0;
+    } @else if $rounded == pill {
+      border-radius: 100px;
     } @else if unit($rounded) == px {
       border-radius: $rounded;
     }
