@@ -23,18 +23,10 @@ input {
   &[type="tel"],
   &[type="url"],
   &[type="password"] {
-    -webkit-appearance: none;
     -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
-  }
 
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
     height: 38px;
     padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
     background-color: #fff;
@@ -62,18 +54,18 @@ input {
 }
 
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   min-height: 65px;
   padding-top: 6px;
   padding-bottom: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 label,
 legend {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
@@ -84,6 +76,6 @@ fieldset {
 
 label > .label-body {
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-weight: normal;
 }

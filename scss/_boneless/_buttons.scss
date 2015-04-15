@@ -1,6 +1,4 @@
-@import "_buttons/mixins";
+@import '_buttons/mixins';
 
 @include button($classname: 'button', $color: $secondary-color);
 @include button($classname: 'button-primary', $color: $primary-color);
-
-// TODO: Think about adding styles for input types submit, reset & button
