@@ -71,6 +71,8 @@ gulp.task('watch-docs', function() {
     gulp.watch(config.paths.boneless.docs, ['build','docs']);
 });
 
+
+// Lint task
 gulp.task('lint', function() {
     gulp.src('./scss/**/*.scss')
         .pipe(scsslint({
