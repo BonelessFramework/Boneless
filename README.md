@@ -59,7 +59,7 @@ After you have made changes to the documentation, create a PR and start the titl
 (Your name here)
 
 ## License
-Use me, fork me, steel me, build me, share me [open-source MIT license](http://opensource.org/licenses/mit-license.php).
+Use me, fork me, steal me, build me, share me [open-source MIT license](http://opensource.org/licenses/mit-license.php).
 
 ## Acknowledgements
 Boneless was inspired by [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). Jellyfish logo was created by [Seth Coelen](http://www.twitter.com/whatsnewsaes). [It still needs a name](https://github.com/whatsnewsaes/Boneless/issues/1).
