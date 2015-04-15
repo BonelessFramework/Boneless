@@ -1,5 +1,9 @@
 ![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/images/Jelly.png)
 
+[![Things in backlog](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=Backlog&title=Backlog)](http://waffle.io/whatsnewsaes/Boneless)
+[![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=To%20do&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
+[![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=In%20Progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
+
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 
 **Potential direction for Boneless**
