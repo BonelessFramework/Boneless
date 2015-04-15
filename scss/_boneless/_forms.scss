@@ -7,6 +7,11 @@ select {
   border-radius: $global-radius;
   box-shadow: none;
   box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    outline: 0;
+  }
 }
 
 // Removes awkward default styles on some inputs for iOS
@@ -22,7 +27,7 @@ input {
     -moz-appearance: none;
     appearance: none;
   }
-  
+
   &[type="email"],
   &[type="number"],
   &[type="search"],
@@ -38,18 +43,7 @@ input {
     box-shadow: none;
     box-sizing: border-box;
   }
-}
 
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-input {
   &[type="email"]:focus,
   &[type="number"]:focus,
   &[type="search"]:focus,
@@ -60,12 +54,20 @@ input {
     border: 1px solid $primary-color;
     outline: 0;
   }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: inline;
+  }
 }
 
-textarea:focus,
-select:focus {
-  border: 1px solid $primary-color;
-  outline: 0;
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 label,
@@ -78,13 +80,6 @@ legend {
 fieldset {
   padding: 0;
   border-width: 0;
-}
-
-input {
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline;
-  }
 }
 
 label > .label-body {
