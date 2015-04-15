@@ -133,7 +133,6 @@ linters:
     properties:
       border: ['px']
       line-height: []
-      font-size: ['em','rem']
     severity: error
 
   QualifyingElement:
