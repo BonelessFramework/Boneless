@@ -23,10 +23,6 @@ input {
   &[type="tel"],
   &[type="url"],
   &[type="password"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-
     height: 38px;
     padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
     background-color: #fff;
@@ -34,6 +30,10 @@ input {
     border-radius: $global-radius;
     box-shadow: none;
     box-sizing: border-box;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   &[type="email"]:focus,
