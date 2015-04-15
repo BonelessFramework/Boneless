@@ -2,15 +2,17 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    sassdoc = require('sassdoc');
+    sassdoc = require('sassdoc'),
+    header = require('gulp-header'),
+    pkg = require('./package.json');
 
 var config = {
     paths: {
         boneless: {
-            src: './scss/boneless.scss',
-            dest: './lib',
-            watch: './scss/**/**/*.scss',
-            docs: './scss/**/**/*.scss'
+            src: './boneless.scss',
+            dest: './bin',
+            watch: './lib/**/**/*.scss',
+            docs: './lib/**/**/*.scss'
         }
     },
     plugins: {
@@ -36,6 +38,14 @@ var config = {
                     access: 'public'
                 }
             }
+        },
+        header: {
+            banner: ['/**',
+                ' * <%= pkg.name %> - <%= pkg.description %>',
+                ' * @version v<%= pkg.version %>',
+                ' * @license <%= pkg.license %>',
+                ' */',
+                ''].join('\n')
         }
     }
 };
@@ -53,12 +63,9 @@ gulp.task('build', function() {
             browsers: config.plugins.autoprefixer.browsers,
             cascade: config.plugins.autoprefixer.cascade
         }))
+        .pipe(header(config.plugins.header.banner, { pkg : pkg } ))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.paths.boneless.dest));
-});
-
-gulp.task('watch', function() {
-    gulp.watch(config.paths.boneless.watch, ['build']);
 });
 
 gulp.task('docs', function() {
@@ -66,6 +73,6 @@ gulp.task('docs', function() {
         .pipe(sassdoc(config.plugins.sassdoc.options));
 });
 
-gulp.task('watch-docs', function() {
-    gulp.watch(config.paths.boneless.docs, ['build','docs']);
+gulp.task('watch', function() {
+    gulp.watch(config.paths.boneless.watch, ['build', 'docs']);
 });

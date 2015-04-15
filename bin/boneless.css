@@ -1,13 +1,8 @@
-/*
-* boneless V0.0.1
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
 /**
-* Color definitions from
-* mrmrs - clrs
-* http://clrs.cc/
-*/
+ * Boneless - A Community Driven Front-End Framework
+ * @version v0.0.1
+ * @license MIT
+ */
 *, *:before, *:after {
   box-sizing: border-box; }
 

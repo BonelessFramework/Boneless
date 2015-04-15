@@ -1,8 +1,8 @@
-/*
-* boneless V0.0.1
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
+//
+// Boneless V0.0.1
+// Free to use under the MIT license.
+// http://www.opensource.org/licenses/mit-license.php
+//
 
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -17,36 +17,36 @@
 // Config
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/colors";
-@import "_boneless/config";
-@import "_boneless/_utilities/_mixins";
+@import 'lib/_boneless/colors';
+@import 'lib/_boneless/config';
+@import 'lib/_boneless/_utilities/mixins';
 
 // Base
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/base";
+@import 'lib/_boneless/base';
 
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/grid";
+@import 'lib/_boneless/grid';
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/typography";
+@import 'lib/_boneless/typography';
 
 // Buttons
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/buttons";
+@import 'lib/_boneless/buttons';
 
 // Forms
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/forms";
+@import 'lib/_boneless/forms';
 
 // Utilities
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/utilities";
+@import 'lib/_boneless/utilities';
