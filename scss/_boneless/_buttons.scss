@@ -1,4 +1,4 @@
-@import "_buttons/mixins";
+@import '_buttons/mixins';
 
 @include button($classname: 'button', $color: $secondary-color);
 @include button($classname: 'button-primary', $color: $primary-color);
