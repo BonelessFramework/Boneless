@@ -1,3 +1,5 @@
+scss_files: './scss/**/*.scss'
+
 linters:
   BangFormat:
     enabled: true

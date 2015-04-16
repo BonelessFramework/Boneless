@@ -3,6 +3,8 @@ node_js:
   - "0.11"
 before_install: gem install scss-lint
 install: npm install
-script: gulp lint
+script:
+  - gulp build
+  - scss-lint -c scsslint.yml
 notifications:
   email: false
