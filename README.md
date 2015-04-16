@@ -1,5 +1,8 @@
 ![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/images/Jelly.png)
 
+[![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=todo&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
+[![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
+
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 
 **Potential direction for Boneless**
@@ -22,12 +25,7 @@ Any and all contributions are welcome. We will define guidelines as the communit
 
 * Fork and clone this library. `git clone git@github.com:whatsnewsaes/Boneless.git`
 
-* Navigate into the project folder and install dependencies via npm.
-
-  ```shell
-  cd boneless
-  npm install
-  ```
+* Navigate into the project folder and install dependencies via npm. `cd boneless && npm install`
 
 * Make your changes
 
@@ -61,7 +59,7 @@ After you have made changes to the documentation, create a PR and start the titl
 (Your name here)
 
 ## License
-Use me, fork me, steel me, build me, share me [open-source MIT license](http://opensource.org/licenses/mit-license.php).
+Use me, fork me, steal me, build me, share me [open-source MIT license](http://opensource.org/licenses/mit-license.php).
 
 ## Acknowledgements
 Boneless was inspired by [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). Jellyfish logo was created by [Seth Coelen](http://www.twitter.com/whatsnewsaes). [It still needs a name](https://github.com/whatsnewsaes/Boneless/issues/1).
