@@ -655,7 +655,6 @@ th:last-child, td:last-child {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
   letter-spacing: .1rem;
@@ -664,7 +663,8 @@ th:last-child, td:last-child {
   height: 38px;
   line-height: 38px;
   border: 1px solid #6e6e6e;
-  color: #555; }
+  color: #555;
+  border-radius: 4px; }
 
 .button:hover, .button:focus {
   outline: 0;
@@ -679,7 +679,6 @@ th:last-child, td:last-child {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
   letter-spacing: .1rem;
@@ -688,7 +687,8 @@ th:last-child, td:last-child {
   height: 38px;
   line-height: 38px;
   border: 1px solid #63d1f3;
-  color: #33c3f0; }
+  color: #33c3f0;
+  border-radius: 4px; }
 
 .button-primary:hover, .button-primary:focus {
   outline: 0;
@@ -703,7 +703,6 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
   letter-spacing: .1rem;
@@ -712,7 +711,8 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   height: 38px;
   line-height: 38px;
   border: 1px solid #63d1f3;
-  color: #33c3f0; }
+  color: #33c3f0;
+  border-radius: 4px; }
 button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
   outline: 0;
   color: #0d89b0;
