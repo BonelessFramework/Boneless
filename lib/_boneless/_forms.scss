@@ -1,3 +1,13 @@
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
 textarea,
 select {
   height: 38px;
@@ -7,22 +17,15 @@ select {
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    outline: 0;
+  }
 }
 
 // Removes awkward default styles on some inputs for iOS
 input {
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
   &[type="email"],
   &[type="number"],
   &[type="search"],
@@ -37,36 +40,24 @@ input {
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+      border: 1px solid $primary-color;
+      outline: 0;
+    }
+
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: inline;
   }
 }
 
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-input {
-  &[type="email"]:focus,
-  &[type="number"]:focus,
-  &[type="search"]:focus,
-  &[type="text"]:focus,
-  &[type="tel"]:focus,
-  &[type="url"]:focus,
-  &[type="password"]:focus {
-    border: 1px solid $primary-color;
-    outline: 0;
-  }
-}
-
-textarea:focus,
-select:focus {
-  border: 1px solid $primary-color;
-  outline: 0;
-}
 
 label,
 legend {
@@ -78,13 +69,6 @@ legend {
 fieldset {
   padding: 0;
   border-width: 0;
-}
-
-input {
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline;
-  }
 }
 
 label > .label-body {
