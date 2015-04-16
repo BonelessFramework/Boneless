@@ -4,7 +4,7 @@ node_js:
 before_install: gem install scss-lint
 install: npm install
 script:
-  - gulp build
   - gulp lint
+  - gulp build
 notifications:
   email: false
