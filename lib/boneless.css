@@ -791,7 +791,7 @@ table th {
   table tr {
     margin-bottom: 10px;
     display: block;
-    border-bottom: 2px solid #ddd; }
+    border-bottom: 1px solid #ddd; }
   table td {
     display: block;
     text-align: right;
