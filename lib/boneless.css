@@ -646,7 +646,7 @@ pre > code {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   padding: 0 30px;
   font-size: 11px;
   height: 38px;
@@ -670,7 +670,7 @@ pre > code {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   padding: 0 30px;
   font-size: 11px;
   height: 38px;
@@ -694,7 +694,7 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   padding: 0 30px;
   font-size: 11px;
   height: 38px;
