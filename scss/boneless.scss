@@ -17,36 +17,41 @@
 // Config
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/colors";
-@import "_boneless/config";
-@import "_boneless/_utilities/_mixins";
+@import '_boneless/colors';
+@import '_boneless/config';
+@import '_boneless/_utilities/mixins';
 
 // Base
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/base";
+@import '_boneless/base';
 
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/grid";
+@import '_boneless/grid';
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/typography";
+@import '_boneless/typography';
 
 // Buttons
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/buttons";
+@import '_boneless/buttons';
 
 // Forms
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/forms";
+@import '_boneless/forms';
+
+// Tables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import '_boneless/tables';
 
 // Utilities
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/utilities";
+@import '_boneless/utilities';
