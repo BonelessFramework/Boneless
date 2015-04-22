@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    sassdoc = require('sassdoc');
+    sassdoc = require('sassdoc'),
+    scsslint = require('gulp-scss-lint');
 
 var config = {
     paths: {
@@ -79,4 +80,24 @@ gulp.task('docs', function() {
 
 gulp.task('watch-docs', function() {
     gulp.watch(config.paths.boneless.docs, ['build', 'docs']);
+});
+
+
+// Lint task
+gulp.task('lint', function() {
+    gulp.src('./scss/**/*.scss')
+        .pipe(scsslint({
+            'config': 'scsslint.yml',
+        }))
+        .pipe(scsslint.failReporter('E'));
+});
+
+
+// Lint task
+gulp.task('lint', function() {
+    gulp.src('./scss/**/*.scss')
+        .pipe(scsslint({
+            'config': 'scsslint.yml',
+        }))
+        .pipe(scsslint.failReporter('E'));
 });

@@ -2,6 +2,7 @@
 
 [![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=todo&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
 [![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
+![Travis CI Build Status](https://travis-ci.org/benhinchley/Boneless.svg)
 
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 

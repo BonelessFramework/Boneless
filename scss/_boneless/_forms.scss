@@ -7,22 +7,15 @@ select {
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    outline: 0;
+  }
 }
 
 // Removes awkward default styles on some inputs for iOS
 input {
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
   &[type="email"],
   &[type="number"],
   &[type="search"],
@@ -37,19 +30,12 @@ input {
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
-}
 
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-input {
   &[type="email"]:focus,
   &[type="number"]:focus,
   &[type="search"]:focus,
@@ -60,18 +46,26 @@ input {
     border: 1px solid $primary-color;
     outline: 0;
   }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: inline;
+  }
 }
 
-textarea:focus,
-select:focus {
-  border: 1px solid $primary-color;
-  outline: 0;
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 label,
 legend {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
@@ -80,15 +74,8 @@ fieldset {
   border-width: 0;
 }
 
-input {
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline;
-  }
-}
-
 label > .label-body {
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-weight: normal;
 }
