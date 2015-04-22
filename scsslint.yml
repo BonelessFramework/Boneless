@@ -85,7 +85,7 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: tab
+    character: spaces
     width: 2
     severity: error
 

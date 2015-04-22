@@ -1,28 +1,28 @@
 // Responsive Table Support
 table {
-  border: 1px solid #ccc;
   width: 100%;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
   border-collapse: collapse;
   border-spacing: 0;
-}
 
-table tr {
-  border: 1px solid #ddd;
-  padding: 5px;
-}
+  tr {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
 
-table th,
-table td {
-  padding: 10px;
-  text-align: center;
-}
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
 
-table th {
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
+  th {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 }
 
 
@@ -41,15 +41,15 @@ $bp-tables: 'only screen and (max-width: #{$medium-up})';
   }
 
   table tr {
-    margin-bottom: 10px;
     display: block;
+    margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
   }
 
   table td {
     display: block;
+    font-size: 0.9rem;
     text-align: right;
-    font-size: 13px;
     border-bottom: 1px dotted #ccc;
   }
 
@@ -58,10 +58,10 @@ $bp-tables: 'only screen and (max-width: #{$medium-up})';
   }
 
   table td:before {
-    content: attr(data-label);
     float: left;
-    text-transform: uppercase;
     font-weight: bold;
+    text-transform: uppercase;
+    content: attr(data-label);
   }
 
 }

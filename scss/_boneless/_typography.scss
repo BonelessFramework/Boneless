@@ -18,7 +18,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
 
 // Larger than phablet
 @include bp($bp-grid-medium) {
-  h1 { font-size: 5.0rem; }
+  h1 { font-size: 5rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3rem; }

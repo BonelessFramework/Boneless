@@ -36,21 +36,20 @@
     // Every button
     display: inline-block;
     font-weight: 600;
+    letter-spacing: 0.1rem;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
     background-color: transparent;
-    cursor: pointer;
     box-sizing: border-box;
-    letter-spacing: 0.1rem;
 
     // Size
     @if $size == small {
+      height: 28px;
       padding: 0 10px;
       font-size: 9.5px;
-      height: 28px;
       line-height: 28px;
     } @else if $size == medium {
       padding: 0 30px;
@@ -67,13 +66,10 @@
     @if $type == border {
       color: $color;
       border: 1px solid lighten($color, 10%);
-      color: $color;
     } @else if $type == solid {
       color: lighten($color, 100%);
       background-color: $color;
       border: 1px solid $color;
-      background-color: $color;
-      color: lighten($color, 100%);
     }
 
     // Rounded

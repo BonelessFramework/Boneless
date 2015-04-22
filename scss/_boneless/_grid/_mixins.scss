@@ -55,8 +55,8 @@
         left: auto;
       } @else if $prefix == push {
         position: relative;
-        left: _col-width($i, $total-columns);
         right: auto;
+        left: _col-width($i, $total-columns);
       }
     }
   }
