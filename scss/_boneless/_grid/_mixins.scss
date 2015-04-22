@@ -20,7 +20,7 @@
 @mixin gen-cols($total-columns, $name) {
   @for $i from 1 through $total-columns {
     .#{$name}-#{$i} {
-      width: _col-width($i,$total-columns);
+      width: _col-width($i, $total-columns);
     }
   }
 }
@@ -48,14 +48,14 @@
   @for $i from 1 through $total-columns {
     .#{$name}-#{$prefix}-#{$i} {
       @if $prefix == offset {
-        margin-left: _col-width($i,$total-columns) !important;
+        margin-left: _col-width($i, $total-columns) !important;
       } @else if $prefix == pull {
         position: relative;
-        right: _col-width($i,$total-columns);
+        right: _col-width($i, $total-columns);
         left: auto;
       } @else if $prefix == push {
         position: relative;
-        left: _col-width($i,$total-columns);
+        left: _col-width($i, $total-columns);
         right: auto;
       }
     }
