@@ -1,5 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    plumber = require('gulp-plumber'),
+    gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     sassdoc = require('sassdoc'),
@@ -41,9 +43,17 @@ var config = {
     }
 };
 
+function handleError(err) {
+    console.log(err.toString());
+    gutil.beep(); // little beep so you know there's an error
+    this.emit('end');
+}
 
 gulp.task('build', function() {
     return gulp.src(config.paths.boneless.src)
+        .pipe(plumber({
+            errorHandler: handleError
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: config.plugins.sass.outputStyle,
@@ -55,6 +65,7 @@ gulp.task('build', function() {
             cascade: config.plugins.autoprefixer.cascade
         }))
         .pipe(sourcemaps.write('.'))
+        .pipe(plumber.stop())
         .pipe(gulp.dest(config.paths.boneless.dest));
 });
 
@@ -68,7 +79,7 @@ gulp.task('docs', function() {
 });
 
 gulp.task('watch-docs', function() {
-    gulp.watch(config.paths.boneless.docs, ['build','docs']);
+    gulp.watch(config.paths.boneless.docs, ['build', 'docs']);
 });
 
 

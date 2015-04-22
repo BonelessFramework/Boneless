@@ -17,7 +17,7 @@
 // Config
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_boneless/colors";
+@import '_boneless/colors';
 @import '_boneless/config';
 @import '_boneless/_utilities/mixins';
 
@@ -46,9 +46,12 @@
 
 @import '_boneless/forms';
 
+// Tables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import '_boneless/tables';
+
 // Utilities
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @import '_boneless/utilities';
-
-@import "_boneless/utilities";
