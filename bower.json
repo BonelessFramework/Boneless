@@ -22,7 +22,7 @@
     "package.json",
     "gulpfile.js"
   ],
-  "Dependencies": {
+  "dependencies": {
     "normalize.css": "~3.0.2"
   }
 }
