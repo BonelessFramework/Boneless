@@ -91,13 +91,3 @@ gulp.task('lint', function() {
         }))
         .pipe(scsslint.failReporter('E'));
 });
-
-
-// Lint task
-gulp.task('lint', function() {
-    gulp.src('./scss/**/*.scss')
-        .pipe(scsslint({
-            'config': 'scsslint.yml',
-        }))
-        .pipe(scsslint.failReporter('E'));
-});
