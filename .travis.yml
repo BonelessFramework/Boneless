@@ -3,12 +3,15 @@ node_js:
   - "0.11"
 before_install:
   - gem install scss-lint
-  - npm install -g parker
+  - gem install sass
+  - npm install -g parker node-sass
 install: npm install
 script:
   - gulp lint
-  - gulp build
+  - node-sass --output-style nested --precision 10 scss/boneless.scss lib/boneless.css
+  - sass -t nested --precision 10 -C scss/boneless.scss lib/boneless.css
 after_success:
+  - gulp build
   - parker lib/boneless.css
 notifications:
   email: false
