@@ -41,6 +41,7 @@ input {
     box-shadow: none;
     box-sizing: border-box;
 
+    -moz-appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -62,7 +63,7 @@ input {
 label,
 legend {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
@@ -73,6 +74,6 @@ fieldset {
 
 label > .label-body {
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-weight: normal;
 }

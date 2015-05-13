@@ -1,8 +1,11 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    plumber = require('gulp-plumber'),
+    gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     sassdoc = require('sassdoc'),
+    scsslint = require('gulp-scss-lint'),
     header = require('gulp-header'),
     pkg = require('./package.json');
 
@@ -50,9 +53,17 @@ var config = {
     }
 };
 
+function handleError(err) {
+    console.log(err.toString());
+    gutil.beep(); // little beep so you know there's an error
+    this.emit('end');
+}
 
 gulp.task('build', function() {
     return gulp.src(config.paths.boneless.src)
+        .pipe(plumber({
+            errorHandler: handleError
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: config.plugins.sass.outputStyle,
@@ -65,7 +76,12 @@ gulp.task('build', function() {
         }))
         .pipe(header(config.plugins.header.banner, { pkg : pkg } ))
         .pipe(sourcemaps.write('.'))
+        .pipe(plumber.stop())
         .pipe(gulp.dest(config.paths.boneless.dest));
+});
+
+gulp.task('watch', function() {
+    gulp.watch(config.paths.boneless.watch, ['build']);
 });
 
 gulp.task('docs', function() {
@@ -73,6 +89,16 @@ gulp.task('docs', function() {
         .pipe(sassdoc(config.plugins.sassdoc.options));
 });
 
-gulp.task('watch', function() {
-    gulp.watch(config.paths.boneless.watch, ['build', 'docs']);
+gulp.task('watch-docs', function() {
+    gulp.watch(config.paths.boneless.docs, ['build', 'docs']);
+});
+
+
+// Lint task
+gulp.task('lint', function() {
+    gulp.src('./scss/**/*.scss')
+        .pipe(scsslint({
+            'config': 'scsslint.yml',
+        }))
+        .pipe(scsslint.failReporter('E'));
 });

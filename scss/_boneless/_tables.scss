@@ -1,0 +1,67 @@
+// Responsive Table Support
+table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tr {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+
+// Respnsive bit that happens only on mobile, and it is mobile first so shouldn't be in a media query
+
+$bp-tables: 'only screen and (max-width: #{$medium-up})';
+
+@include bp($bp-tables) {
+
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table td {
+    display: block;
+    font-size: 0.9rem;
+    text-align: right;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:before {
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    content: attr(data-label);
+  }
+
+}

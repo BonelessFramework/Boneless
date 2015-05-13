@@ -2,6 +2,7 @@
 
 [![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=todo&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
 [![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
+[![Build Status](https://travis-ci.org/whatsnewsaes/Boneless.svg?branch=master)](https://travis-ci.org/whatsnewsaes/Boneless)
 
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 
@@ -13,7 +14,7 @@ Boneless is a community driven front-end framework, written in  [Sass](http://sa
  * Make Boneless the largest community driven front-end framework.
 
 ## Installation Instructions
-To use Boneless simply download the zip, clone the repo or install through bower by going `bower install -D boneless` to save it as a development dependency.
+To use Boneless simply download the zip, clone the repo or install through bower by going `bower install -D whatsnewsaes/Boneless` to save it as a development dependency.
 
 ## Contribution guidelines
 Any and all contributions are welcome. We will define guidelines as the community grows

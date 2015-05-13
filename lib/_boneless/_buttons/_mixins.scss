@@ -3,21 +3,29 @@
 /// @arg {string} $classname [btn] - classname of button styles
 /// @arg {string} $size [medium] - size of button can be small, medium or large
 /// @arg {color} $color [#888] - color of button
-/// @arg {string} $type [border] - style of button can be border or solid
-/// @output button styles defined by args passed in
+/// @arg {string} $type [border] - style of button can be border, solid
+/// @arg {boolean | number | string} $rounded [true] - to declare whether the button has rounded corners, if a number is passed corners are rounded by that amount (number must be a px value), if the word 'pill' is passed creates a pill style button
+///
 /// @access public
 /// @author Benjamin Hinchley
 ///
-/// @example button mixin usage
+/// @example scss Example mixin usage
 ///   @include button($classname: 'button', $color: #999);
 ///
-/// @example button mixin usage for button, input type
+/// @example scss Usage of mixin to style button and input[type="submit"] elements
 ///   button,
 ///   input[type="submit"] {
 ///     @include button($classname: false, $color: #999);
 ///   }
+///
+/// @example scss Usage of mixin creating rectangular buttons
+///   @include button($classname: button-flat, $color: #2ecc40, $rounded: false);
+///
+/// @example scss Usage of mixin creating pill style buttons
+///   @include button($classname: button-pill, $color: #39cccc, $rounded: pill);
+///
 
-@mixin button($classname: btn, $size: medium, $color: #888, $type: border) {
+@mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
   @if $classname == false {
     $output: '&';
   } @else {
@@ -28,43 +36,53 @@
     // Every button
     display: inline-block;
     font-weight: 600;
+    letter-spacing: 0.1rem;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     white-space: nowrap;
-    background-color: transparent;
-    border-radius: 4px;
     cursor: pointer;
+    background-color: transparent;
     box-sizing: border-box;
-    letter-spacing: .1rem;
 
     // Size
     @if $size == small {
+      height: 28px;
       padding: 0 10px;
       font-size: 9.5px;
-      height: 28px;
       line-height: 28px;
     } @else if $size == medium {
       padding: 0 30px;
       font-size: 11px;
-      height: 38px;
       line-height: 38px;
     } @else if $size == large {
+      height: 58px;
       padding: 0 40px;
       font-size: 16px;
-      height: 58px;
       line-height: 58px;
     }
 
     // Type
     @if $type == border {
-        border: 1px solid lighten($color, 10%);
-        color: $color;
+      color: $color;
+      border: 1px solid lighten($color, 10%);
     } @else if $type == solid {
-        border: 1px solid $color;
-        background-color: $color;
-        color: lighten($color, 100%);
+      color: lighten($color, 100%);
+      background-color: $color;
+      border: 1px solid $color;
     }
+
+    // Rounded
+    @if $rounded == true {
+      border-radius: 4px;
+    } @else if $rounded == false {
+      border-radius: 0;
+    } @else if $rounded == pill {
+      border-radius: 100px;
+    } @else if unit($rounded) == px {
+      border-radius: $rounded;
+    }
+
   }
 
   // Hover State
@@ -73,12 +91,13 @@
     outline: 0;
 
     @if $type == solid {
-      background-color: darken($color,11%);
-      border-color: darken($color,11%);
+      background-color: darken($color, 11%);
+      border-color: darken($color, 11%);
     } @else if $type == border {
       color: darken($color, 20%);
       border-color: darken($color, 15%);
     }
+
   }
 
 }

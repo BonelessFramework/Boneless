@@ -1,169 +1,155 @@
-@import "_grid/vars";
-@import "_grid/functions";
-@import "_grid/mixins";
+@import '_grid/vars';
+@import '_grid/functions';
+@import '_grid/mixins';
 
 .column,
 .columns {
-	padding-left: $column-gutter / 2;
-	padding-right: $column-gutter / 2;
-	width: 100%;
-	float: left;
+  float: left;
+  width: 100%;
+  padding-right: $column-gutter / 2;
+  padding-left: $column-gutter / 2;
 }
-
 
 .columns .columns,
 .column .column,
 .column .columns,
 .columns .column {
-	padding-left:0;
-	padding-right:0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .row {
-	max-width: $row-width;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
+  width: 100%;
+  max-width: $small-row-width;
+  margin: 0 auto;
 
-	max-width:$small-row-width;
-
+  .row {
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-.row:before, .row:after {
-	content: " ";
-	display: table;
+.row:before,
+.row:after {
+  display: table;
+  content: ' ';
 }
 
 .row:after {
-	clear: both;
-}
-
-.row .row {
-	width: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	max-width: none;
+  clear: both;
 }
 
 @include bp($bp-grid-small) {
+  .column.small-centered,
+  .columns.small-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-	.column.small-centered,
-	.columns.small-centered {
-		margin-left: auto;
-		margin-right: auto;
-		float: none;
-	}
+  .column.small-uncentered,
+  .columns.small-uncentered {
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-	.column.small-uncentered,
-	.columns.small-uncentered {
-		margin-left: 0;
-		margin-right: 0;
-		float: left;
-	}
+  .column.small-centered:last-child,
+  .columns.small-centered:last-child {
+    float: none;
+  }
 
-	.column.small-centered:last-child,
-	.columns.small-centered:last-child {
-		float: none;
-	}
+  .column.small-uncentered:last-child,
+  .columns.small-uncentered:last-child {
+    float: left;
+  }
 
-	.column.small-uncentered:last-child,
-	.columns.small-uncentered:last-child {
-		float: left;
-	}
-
-	@include gen-cols($total-columns, $name: small);
-	@include gen-col-offsets($total-columns, $name: small, $prefix: offset);
-	@include gen-col-offsets($total-columns, $name: small, $prefix: push);
-	@include gen-col-offsets($total-columns, $name: small, $prefix: pull);
+  @include gen-cols($total-columns, $name: small);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: pull);
 }
-
-
 
 @include bp($bp-grid-medium) {
-	.row{
-		max-width:$medium-row-width;
+  .row {
+    max-width: $medium-row-width;
+  }
 
-	}
-	.columns .columns,
-	.column .column{
-		padding-left:0;
-		padding-right:$column-gutter / 2;
-	}
+  .columns .columns,
+  .column .column {
+    padding-right: $column-gutter / 2;
+    padding-left: 0;
+  }
 
-	.column.medium-centered,
-	.columns.medium-centered {
-		margin-left: auto;
-		margin-right: auto;
-		float: none;
-	}
+  .column.medium-centered,
+  .columns.medium-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-	.column.medium-uncentered,
-	.columns.medium-uncentered {
-		margin-left: 0;
-		margin-right: 0;
-		float: left;
-	}
+  .column.medium-uncentered,
+  .columns.medium-uncentered {
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-	.column.medium-centered:last-child,
-	.columns.medium-centered:last-child {
-		float: none;
-	}
+  .column.medium-centered:last-child,
+  .columns.medium-centered:last-child {
+    float: none;
+  }
 
-	.column.medium-uncentered:last-child,
-	.columns.medium-uncentered:last-child {
-		float: left;
-	}
+  .column.medium-uncentered:last-child,
+  .columns.medium-uncentered:last-child {
+    float: left;
+  }
 
-	@include gen-cols($total-columns, $name: medium);
-	@include gen-col-offsets($total-columns, $name: medium, $prefix: offset);
-	@include gen-col-offsets($total-columns, $name: medium, $prefix: push);
-	@include gen-col-offsets($total-columns, $name: medium, $prefix: pull);
-
+  @include gen-cols($total-columns, $name: medium);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: pull);
 }
 
-
 @include bp($bp-grid-large) {
+  .row {
+    max-width: $large-row-width;
+  }
 
-	.row{
-		max-width:$large-row-width;
+  .columns .columns,
+  .column .column {
+    padding-right: $column-gutter / 2;
+    padding-left: 0;
+  }
 
-	}
+  .column.large-centered,
+  .columns.large-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-	.columns .columns,
-	.column .column{
-		padding-left:0;
-		padding-right:$column-gutter / 2;
-	}
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-	.column.large-centered,
-	.columns.large-centered {
-		margin-left: auto;
-		margin-right: auto;
-		float: none;
-	}
+  .column.large-centered:last-child,
+  .columns.large-centered:last-child {
+    float: none;
+  }
 
-	.column.large-uncentered,
-	.columns.large-uncentered {
-		margin-left: 0;
-		margin-right: 0;
-		float: left;
-	}
+  .column.large-uncentered:last-child,
+  .columns.large-uncentered:last-child {
+    float: left;
+  }
 
-	.column.large-centered:last-child,
-	.columns.large-centered:last-child {
-		float: none;
-	}
-
-	.column.large-uncentered:last-child,
-	.columns.large-uncentered:last-child {
-		float: left;
-	}
-
-	@include gen-cols($total-columns, $name: large);
-	@include gen-col-offsets($total-columns, $name: large, $prefix: offset);
-	@include gen-col-offsets($total-columns, $name: large, $prefix: push);
-	@include gen-col-offsets($total-columns, $name: large, $prefix: pull);
-
+  @include gen-cols($total-columns, $name: large);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: pull);
 }

@@ -1,6 +1,7 @@
 {
   "name": "Boneless",
   "version": "0.0.1",
+  "main": "scss/boneless.scss",
   "homepage": "https://github.com/whatsnewsaes/boneless",
   "authors": [
     "WhatsNewSaes <scoelen89@gmail.com>"
@@ -20,9 +21,10 @@
     "images",
     "index.html",
     "package.json",
-    "gulpfile.js"
+    "gulpfile.js",
+    "scsslint.yml"
   ],
-  "Dependencies": {
+  "dependencies": {
     "normalize.css": "~3.0.2"
   }
 }

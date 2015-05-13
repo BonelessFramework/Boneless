@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "0.11"
+before_install:
+  - gem install scss-lint
+  - npm install -g parker
+install: npm install
+script:
+  - gulp lint
+  - gulp build
+after_success:
+  - parker lib/boneless.css
+notifications:
+  email: false
