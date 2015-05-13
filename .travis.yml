@@ -11,6 +11,7 @@ script:
   - node-sass --output-style nested --precision 10 scss/boneless.scss lib/boneless.css
   - sass -t nested --precision 10 -C scss/boneless.scss lib/boneless.css
 after_success:
+  - gulp build
   - parker lib/boneless.css
 notifications:
   email: false
