@@ -1,4 +1,4 @@
-![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/images/Jelly.png)
+![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/examples/images/Jelly.png)
 
 [![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=todo&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
 [![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
