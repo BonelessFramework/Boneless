@@ -9,6 +9,6 @@ script:
   - gulp lint
   - gulp build
 after_success:
-  - parker lib/boneless.css
+  - parker bin/boneless.css
 notifications:
   email: false
