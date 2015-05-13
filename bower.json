@@ -9,6 +9,7 @@
   "description": "A Community Driven Front-end Framework",
   "keywords": [
     "skeleton",
+    "boneless",
     "framework",
     "css",
     "community"
@@ -18,8 +19,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "images",
-    "index.html",
     "package.json",
     "gulpfile.js",
     "scsslint.yml"
