@@ -582,8 +582,8 @@ p {
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
-  border-top: 1px solid #ddd;
-  border-width: 0; }
+  border-width: 0;
+  border-top: 1px solid #ddd; }
 
 a {
   color: #1eaedb; }
@@ -599,9 +599,9 @@ ul {
     font-size: 90%; }
 
 ol {
+  list-style: decimal inside;
   padding-left: 0;
-  margin-top: 0;
-  list-style: decimal inside; }
+  margin-top: 0; }
   ol ol, ol ul {
     margin: 1.5rem 0 1.5rem 3rem;
     font-size: 90%; }
@@ -622,6 +622,17 @@ pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre; }
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; }
+
+th:first-child, td:first-child {
+  padding-left: 0; }
+
+th:last-child, td:last-child {
+  padding-right: 0; }
 
 .button {
   display: inline-block;
@@ -691,6 +702,14 @@ button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:foc
   color: #0d89b0;
   border-color: #0f9cc8; }
 
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
 textarea, select {
   height: 38px;
   padding: 6px 10px;
@@ -713,20 +732,13 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   box-sizing: border-box;
   -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none; }
-input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #33c3f0;
-  outline: 0; }
+  input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
+    border: 1px solid #33c3f0;
+    outline: 0; }
 input[type="checkbox"], input[type="radio"] {
   display: inline; }
-
-textarea {
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none; }
 
 label, legend {
   display: block;
@@ -755,7 +767,6 @@ table {
   table th, table td {
     padding: 10px;
     text-align: center; }
-
   table th {
     font-size: 1rem;
     letter-spacing: 1px;
