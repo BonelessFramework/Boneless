@@ -22,6 +22,7 @@
   width: 100%;
   max-width: $small-row-width;
   margin: 0 auto;
+  @extend %clearfix;
 
   .row {
     width: auto;
@@ -29,10 +30,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-}
-
-.row {
-  @extend %clearfix;
 }
 
 @include bp($bp-grid-small) {
