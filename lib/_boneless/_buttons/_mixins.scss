@@ -26,10 +26,10 @@
 ///
 
 @mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
+  $output: #{'.' + $classname};
+  
   @if $classname == false {
     $output: '&';
-  } @else {
-    $output: #{'.' + $classname};
   }
 
   #{$output} {

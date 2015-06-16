@@ -1,20 +1,29 @@
 {
   "name": "Boneless",
   "version": "0.0.1",
-  "main": "scss/boneless.scss",
-  "homepage": "https://github.com/whatsnewsaes/boneless",
-  "authors": [
-    "WhatsNewSaes <scoelen89@gmail.com>"
-  ],
   "description": "A Community Driven Front-end Framework",
+  "main": "scss/boneless.scss",
+  "homepage": "https://github.com/whatsnewsaes/Boneless",
+  "authors": [
+    "WhatsNewSaes <scoelen89@gmail.com>",
+    "benhinchley <benjaminhinchley@gmail.com>"
+  ],
   "keywords": [
     "skeleton",
     "boneless",
     "framework",
     "css",
+    "sass",
     "community"
   ],
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/whatsnewsaes/Boneless.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
@@ -22,8 +31,5 @@
     "package.json",
     "gulpfile.js",
     "scsslint.yml"
-  ],
-  "dependencies": {
-    "normalize.css": "~3.0.2"
-  }
+  ]
 }

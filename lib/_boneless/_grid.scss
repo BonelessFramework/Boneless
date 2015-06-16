@@ -42,6 +42,11 @@
 }
 
 @include bp($bp-grid-small) {
+  @include gen-cols($total-columns, $name: small);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: small, $prefix: pull);
+
   .column.small-centered,
   .columns.small-centered {
     float: none;
@@ -66,13 +71,14 @@
     float: left;
   }
 
-  @include gen-cols($total-columns, $name: small);
-  @include gen-col-offsets($total-columns, $name: small, $prefix: offset);
-  @include gen-col-offsets($total-columns, $name: small, $prefix: push);
-  @include gen-col-offsets($total-columns, $name: small, $prefix: pull);
 }
 
 @include bp($bp-grid-medium) {
+  @include gen-cols($total-columns, $name: medium);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: medium, $prefix: pull);
+
   .row {
     max-width: $medium-row-width;
   }
@@ -107,13 +113,14 @@
     float: left;
   }
 
-  @include gen-cols($total-columns, $name: medium);
-  @include gen-col-offsets($total-columns, $name: medium, $prefix: offset);
-  @include gen-col-offsets($total-columns, $name: medium, $prefix: push);
-  @include gen-col-offsets($total-columns, $name: medium, $prefix: pull);
 }
 
 @include bp($bp-grid-large) {
+  @include gen-cols($total-columns, $name: large);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: offset);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: push);
+  @include gen-col-offsets($total-columns, $name: large, $prefix: pull);
+
   .row {
     max-width: $large-row-width;
   }
@@ -147,9 +154,4 @@
   .columns.large-uncentered:last-child {
     float: left;
   }
-
-  @include gen-cols($total-columns, $name: large);
-  @include gen-col-offsets($total-columns, $name: large, $prefix: offset);
-  @include gen-col-offsets($total-columns, $name: large, $prefix: push);
-  @include gen-col-offsets($total-columns, $name: large, $prefix: pull);
 }

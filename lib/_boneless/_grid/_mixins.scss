@@ -48,7 +48,7 @@
   @for $i from 1 through $total-columns {
     .#{$name}-#{$prefix}-#{$i} {
       @if $prefix == offset {
-        margin-left: _col-width($i, $total-columns) !important;
+        margin-left: _col-width($i, $total-columns);
       } @else if $prefix == pull {
         position: relative;
         right: _col-width($i, $total-columns);

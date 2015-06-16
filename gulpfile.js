@@ -14,6 +14,7 @@ var config = {
         boneless: {
             src: './boneless.scss',
             dest: './bin',
+            examples: './examples/css',
             watch: './lib/**/**/*.scss',
             docs: './lib/**/**/*.scss'
         }
@@ -77,7 +78,8 @@ gulp.task('build', function() {
         .pipe(header(config.plugins.header.banner, { pkg : pkg } ))
         .pipe(sourcemaps.write('.'))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(config.paths.boneless.dest));
+        .pipe(gulp.dest(config.paths.boneless.dest))
+        .pipe(gulp.dest(config.paths.boneless.examples));
 });
 
 gulp.task('watch', function() {
