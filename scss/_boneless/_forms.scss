@@ -14,7 +14,7 @@ select {
   }
 }
 
-// Removes awkward default styles on some inputs for iOS
+// TODO: Add styles for other input types like date etc
 input {
   &[type="email"],
   &[type="number"],
@@ -31,6 +31,7 @@ input {
     box-shadow: none;
     box-sizing: border-box;
 
+    // Removes awkward default styles on some inputs for iOS
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;

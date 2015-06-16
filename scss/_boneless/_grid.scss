@@ -31,14 +31,8 @@
   }
 }
 
-.row:before,
-.row:after {
-  display: table;
-  content: ' ';
-}
-
-.row:after {
-  clear: both;
+.row {
+  @extend %clearfix;
 }
 
 @include bp($bp-grid-small) {

@@ -29,7 +29,7 @@
 /// Column offset/push/pull mixin
 /// @name gen-col-offsets
 /// @arg {number} $total-columns - total number of columns in grid
-/// @arg {string} $prefix [offset] - class prefix for offset
+/// @arg {string} $prefix - class prefix for offset
 /// @arg {string} $name - name of grid
 /// @example scss Basic mixin usage
 ///   @include gen-col-offsets(12, small, offset);
@@ -44,7 +44,7 @@
 ///     @include gen-col-offsets($total-columns, $name: medium, $prefix: push);
 ///     @include gen-col-offsets($total-columns, $name: medium, $prefix: pull);
 ///   }
-@mixin gen-col-offsets($total-columns, $name, $prefix: offset) {
+@mixin gen-col-offsets($total-columns, $name, $prefix) {
   @for $i from 1 through $total-columns {
     .#{$name}-#{$prefix}-#{$i} {
       @if $prefix == offset {

@@ -31,13 +31,6 @@ body {
     margin-top: 0;
     margin-bottom: 0; }
 
-.row:before, .row:after {
-  display: table;
-  content: ' '; }
-
-.row:after {
-  clear: both; }
-
 @media only screen {
   .small-1 {
     width: 8.3333333333%; }
@@ -581,7 +574,9 @@ hr {
   border-width: 0; }
 
 a {
-  color: #1eaedb; }
+  color: #1eaedb;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease; }
   a:hover {
     color: #1b9cc5; }
 
@@ -618,7 +613,7 @@ pre > code {
   padding: 1rem 1.5rem;
   white-space: pre; }
 
-.button {
+.btn {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -636,12 +631,17 @@ pre > code {
   border: 1px solid #6e6e6e;
   border-radius: 4px; }
 
-.button:hover, .button:focus {
+.btn:hover, .btn:focus {
   outline: 0;
   color: #222222;
   border-color: #2f2f2f; }
 
-.button-primary {
+.btn:active {
+  outline: 0;
+  color: #222222;
+  border-color: #2f2f2f; }
+
+.btn-primary {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -659,7 +659,12 @@ pre > code {
   border: 1px solid #63d1f3;
   border-radius: 4px; }
 
-.button-primary:hover, .button-primary:focus {
+.btn-primary:hover, .btn-primary:focus {
+  outline: 0;
+  color: #0d89b0;
+  border-color: #0f9cc8; }
+
+.btn-primary:active {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
@@ -682,6 +687,10 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   border: 1px solid #63d1f3;
   border-radius: 4px; }
 button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
+  outline: 0;
+  color: #0d89b0;
+  border-color: #0f9cc8; }
+button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
@@ -777,7 +786,7 @@ table {
     text-transform: uppercase;
     content: attr(data-label); } }
 
-.clearfix:after {
+.row:after, .u-cf:after {
   display: table;
   clear: both;
   content: ''; }

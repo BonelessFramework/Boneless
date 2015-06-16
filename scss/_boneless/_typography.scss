@@ -30,7 +30,7 @@ p {
   margin-top: 0;
 }
 
-// HR element
+// hr element
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -41,6 +41,7 @@ hr {
 // Links
 a {
   color: $link-color;
+  transition: color 0.2s ease;
 
   &:hover {
     color: darken($link-color, 5%);
