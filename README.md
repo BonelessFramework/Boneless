@@ -16,15 +16,20 @@ Boneless is a community driven front-end framework, written in  [Sass](http://sa
 ## Installation Instructions
 To use Boneless simply download the zip, clone the repo or install through bower by going `bower install -D whatsnewsaes/Boneless` to save it as a development dependency.
 
-## [Contribution Guidelines](CONTRIBUTING.md)
+## Contribution Guidelines
+Any and all contributions are welcome, have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
+
+## Core team
+* Seth Coelen - [@WhatsNewSaes](https://twitter.com/WhatsNewSaes)
+* Benjamin Hinchley - [@bhinchley](https://twitter.com/BHinchley)
 
 ## Contributor list
-(Your name here)
+* your name - twitter handle
 
 ## License
-Use me, fork me, steal me, build me, share me [open-source MIT license](http://opensource.org/licenses/mit-license.php).
+Use me, fork me, steal me, build me, share me [open-source MIT license](LICENSE).
 
 ## Acknowledgements
 Boneless was inspired by [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). Jellyfish logo was created by [Seth Coelen](http://www.twitter.com/whatsnewsaes). [It still needs a name](https://github.com/whatsnewsaes/Boneless/issues/1).
 
-Made without love from my basement.
+Made without love from our basements.
