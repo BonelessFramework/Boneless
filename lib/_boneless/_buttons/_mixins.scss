@@ -24,10 +24,11 @@
 /// @example scss Usage of mixin creating pill style buttons
 ///   @include button($classname: button-pill, $color: #39cccc, $rounded: pill);
 ///
+/// @todo Add active state styles (currently just the same as hover/focus)
 
 @mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
   $output: #{'.' + $classname};
-  
+
   @if $classname == false {
     $output: '&';
   }
@@ -85,9 +86,23 @@
 
   }
 
-  // Hover State
+  // Hover & Focus State
   #{$output}:hover,
   #{$output}:focus {
+    outline: 0;
+
+    @if $type == solid {
+      background-color: darken($color, 11%);
+      border-color: darken($color, 11%);
+    } @else if $type == border {
+      color: darken($color, 20%);
+      border-color: darken($color, 15%);
+    }
+
+  }
+
+  //TODO: style :active properly
+  #{$output}:active {
     outline: 0;
 
     @if $type == solid {
