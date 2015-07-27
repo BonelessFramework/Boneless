@@ -13,8 +13,7 @@ var config = {
             src: './scss/boneless.scss',
             dest: './lib',
             examples: './examples/css',
-            watch: './scss/**/**/*.scss',
-            docs: './scss/**/**/*.scss'
+            watch: './scss/**/**/*.scss'
         }
     },
     plugins: {
@@ -71,19 +70,14 @@ gulp.task('build', function() {
         .pipe(gulp.dest(config.paths.boneless.examples));
 });
 
-gulp.task('watch', function() {
-    gulp.watch(config.paths.boneless.watch, ['build']);
-});
-
 gulp.task('docs', function() {
     return gulp.src(config.paths.boneless.docs)
         .pipe(sassdoc(config.plugins.sassdoc.options));
 });
 
-gulp.task('watch-docs', function() {
-    gulp.watch(config.paths.boneless.docs, ['build', 'docs']);
+gulp.task('watch', function() {
+    gulp.watch(config.paths.boneless.watch, ['build','docs']);
 });
-
 
 // Lint task
 gulp.task('lint', function() {
