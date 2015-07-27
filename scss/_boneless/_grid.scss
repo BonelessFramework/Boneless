@@ -37,31 +37,6 @@
   @include gen-col-offsets($total-columns, $name: small, $prefix: offset);
   @include gen-col-offsets($total-columns, $name: small, $prefix: push);
   @include gen-col-offsets($total-columns, $name: small, $prefix: pull);
-
-  .column.small-centered,
-  .columns.small-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .column.small-uncentered,
-  .columns.small-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .column.small-centered:last-child,
-  .columns.small-centered:last-child {
-    float: none;
-  }
-
-  .column.small-uncentered:last-child,
-  .columns.small-uncentered:last-child {
-    float: left;
-  }
-
 }
 
 @include bp($bp-grid-medium) {
@@ -79,31 +54,6 @@
     padding-right: $column-gutter / 2;
     padding-left: 0;
   }
-
-  .column.medium-centered,
-  .columns.medium-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .column.medium-uncentered,
-  .columns.medium-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .column.medium-centered:last-child,
-  .columns.medium-centered:last-child {
-    float: none;
-  }
-
-  .column.medium-uncentered:last-child,
-  .columns.medium-uncentered:last-child {
-    float: left;
-  }
-
 }
 
 @include bp($bp-grid-large) {
@@ -121,28 +71,29 @@
     padding-right: $column-gutter / 2;
     padding-left: 0;
   }
+}
 
-  .column.large-centered,
-  .columns.large-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-  }
+// Centered and Uncentred Columns
+.column.centered,
+.columns.centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  .column.large-uncentered,
-  .columns.large-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0;
-  }
+.column.uncentered,
+.columns.uncentered {
+  float: left;
+  margin-right: 0;
+  margin-left: 0;
+}
 
-  .column.large-centered:last-child,
-  .columns.large-centered:last-child {
-    float: none;
-  }
+.column.centered:last-child,
+.columns.centered:last-child {
+  float: none;
+}
 
-  .column.large-uncentered:last-child,
-  .columns.large-uncentered:last-child {
-    float: left;
-  }
+.column.uncentered:last-child,
+.columns.uncentered:last-child {
+  float: left;
 }
