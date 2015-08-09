@@ -3,7 +3,7 @@
  * @version v0.0.1
  * @license MIT
  */
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box; }
 
 html {
@@ -35,13 +35,6 @@ body {
     max-width: none;
     margin-top: 0;
     margin-bottom: 0; }
-
-.row:before, .row:after {
-  display: table;
-  content: ' '; }
-
-.row:after {
-  clear: both; }
 
 @media only screen {
   .small-1 {
@@ -187,19 +180,7 @@ body {
   .small-pull-12 {
     position: relative;
     right: 100%;
-    left: auto; }
-  .column.small-centered, .columns.small-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto; }
-  .column.small-uncentered, .columns.small-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0; }
-  .column.small-centered:last-child, .columns.small-centered:last-child {
-    float: none; }
-  .column.small-uncentered:last-child, .columns.small-uncentered:last-child {
-    float: left; } }
+    left: auto; } }
 
 @media only screen and (min-width: 48em) {
   .medium-1 {
@@ -350,19 +331,7 @@ body {
     max-width: 48em; }
   .columns .columns, .column .column {
     padding-right: 1em;
-    padding-left: 0; }
-  .column.medium-centered, .columns.medium-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto; }
-  .column.medium-uncentered, .columns.medium-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0; }
-  .column.medium-centered:last-child, .columns.medium-centered:last-child {
-    float: none; }
-  .column.medium-uncentered:last-child, .columns.medium-uncentered:last-child {
-    float: left; } }
+    padding-left: 0; } }
 
 @media only screen and (min-width: 62.5em) {
   .large-1 {
@@ -513,19 +482,23 @@ body {
     max-width: 75em; }
   .columns .columns, .column .column {
     padding-right: 1em;
-    padding-left: 0; }
-  .column.large-centered, .columns.large-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto; }
-  .column.large-uncentered, .columns.large-uncentered {
-    float: left;
-    margin-right: 0;
-    margin-left: 0; }
-  .column.large-centered:last-child, .columns.large-centered:last-child {
-    float: none; }
-  .column.large-uncentered:last-child, .columns.large-uncentered:last-child {
-    float: left; } }
+    padding-left: 0; } }
+
+.column.centered, .columns.centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto; }
+
+.column.uncentered, .columns.uncentered {
+  float: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.column.centered:last-child, .columns.centered:last-child {
+  float: none; }
+
+.column.uncentered:last-child, .columns.uncentered:last-child {
+  float: left; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -634,7 +607,7 @@ th:first-child, td:first-child {
 th:last-child, td:last-child {
   padding-right: 0; }
 
-.button {
+.btn {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -652,12 +625,17 @@ th:last-child, td:last-child {
   border: 1px solid #6e6e6e;
   border-radius: 4px; }
 
-.button:hover, .button:focus {
+.btn:hover, .btn:focus {
   outline: 0;
   color: #222222;
   border-color: #2f2f2f; }
 
-.button-primary {
+.btn:active {
+  outline: 0;
+  color: #222222;
+  border-color: #2f2f2f; }
+
+.btn-primary {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -675,7 +653,12 @@ th:last-child, td:last-child {
   border: 1px solid #63d1f3;
   border-radius: 4px; }
 
-.button-primary:hover, .button-primary:focus {
+.btn-primary:hover, .btn-primary:focus {
+  outline: 0;
+  color: #0d89b0;
+  border-color: #0f9cc8; }
+
+.btn-primary:active {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
@@ -698,6 +681,10 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   border: 1px solid #63d1f3;
   border-radius: 4px; }
 button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus {
+  outline: 0;
+  color: #0d89b0;
+  border-color: #0f9cc8; }
+button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
@@ -788,13 +775,13 @@ table {
     border-bottom: 1px dotted #ccc; }
   table td:last-child {
     border-bottom: 0; }
-  table td:before {
+  table td::before {
     float: left;
     font-weight: bold;
     text-transform: uppercase;
     content: attr(data-label); } }
 
-.clearfix:after {
+.row::after, .u-cf::after {
   display: table;
   clear: both;
   content: ''; }
