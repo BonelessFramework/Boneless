@@ -1,12 +1,11 @@
 {
   "name": "Boneless",
-  "version": "0.0.1",
   "description": "A Community Driven Front-end Framework",
-  "main": "scss/boneless.scss",
-  "homepage": "https://github.com/whatsnewsaes/Boneless",
+  "main": "boneless.scss",
+  "homepage": "https://github.com/benhinchley/Boneless",
   "authors": [
-    "WhatsNewSaes <scoelen89@gmail.com>",
-    "benhinchley <benjaminhinchley@gmail.com>"
+    "benhinchley <benjaminhinchley@gmail.com>",
+    "WhatsNewSaes <scoelen89@gmail.com>"
   ],
   "keywords": [
     "skeleton",
@@ -28,8 +27,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "bower.json",
     "package.json",
     "gulpfile.js",
-    "scsslint.yml"
+    "scsslint.yml",
+    "CONTRIBUTING.md"
   ]
 }
