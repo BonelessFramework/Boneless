@@ -1,3 +1,13 @@
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
 textarea,
 select {
   height: 38px;
@@ -34,18 +44,14 @@ input {
     // Removes awkward default styles on some inputs for iOS
     -moz-appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-  }
 
-  &[type="email"]:focus,
-  &[type="number"]:focus,
-  &[type="search"]:focus,
-  &[type="text"]:focus,
-  &[type="tel"]:focus,
-  &[type="url"]:focus,
-  &[type="password"]:focus {
-    border: 1px solid $primary-color;
-    outline: 0;
+    &:focus {
+      border: 1px solid $primary-color;
+      outline: 0;
+    }
+
   }
 
   &[type="checkbox"],
@@ -54,14 +60,6 @@ input {
   }
 }
 
-textarea {
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
 
 label,
 legend {
