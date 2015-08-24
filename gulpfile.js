@@ -15,14 +15,14 @@ var config = {
       src: './boneless.scss',
       dest: './bin',
       examples: './examples/css',
-      watch: './lib/**/**/*.scss',
+      watch: './lib/**/**/*.scss'
     }
   },
   plugins: {
     sass: {
       outputStyle: 'nested',
       precision: 10,
-      noCache: true,
+      noCache: true
     },
     autoprefixer: {
       browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
@@ -97,7 +97,7 @@ gulp.task('watch', function() {
 gulp.task('lint', function() {
   gulp.src('./scss/**/*.scss')
     .pipe(scsslint({
-      'config': 'scsslint.yml',
+      'config': 'scsslint.yml'
     }))
     .pipe(scsslint.failReporter('E'));
 });
