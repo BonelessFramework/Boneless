@@ -31,34 +31,37 @@ $bp-tables: 'only screen and (max-width: #{$medium-up})';
 
   table {
     border: 0;
-  }
 
-  table thead {
+    thead {
     display: none;
   }
 
-  table tr {
+    tr {
     display: block;
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
   }
 
-  table td {
+    tbody {
+      td {
     display: block;
     font-size: 0.9em;
     text-align: right;
     border-bottom: 1px dotted #ccc;
-  }
 
-  table td:last-child {
-    border-bottom: 0;
-  }
-
-  table td::before {
+        &::before {
     float: left;
+          text-align: left;
     font-weight: bold;
     text-transform: uppercase;
     content: attr(data-label);
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
   }
 
 }
