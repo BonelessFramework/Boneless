@@ -15,14 +15,14 @@ var config = {
       src: './boneless.scss',
       dest: './bin',
       examples: './examples/css',
-      watch: './lib/**/**/*.scss',
+      watch: './lib/**/**/*.scss'
     }
   },
   plugins: {
     sass: {
       outputStyle: 'nested',
       precision: 10,
-      noCache: true,
+      noCache: true
     },
     autoprefixer: {
       browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
@@ -31,7 +31,7 @@ var config = {
     sassdoc: {
       options: {
         dest: 'docs',
-        basePath: 'https://github.com/whatsnewsaes/Boneless/tree/master/scss',
+        basePath: 'https://github.com/benhinchley/Boneless/tree/master/scss',
         groups: {
           utility: 'Utility',
           config: 'Configuration',
@@ -95,9 +95,9 @@ gulp.task('watch', function() {
 
 // Lint task
 gulp.task('lint', function() {
-  gulp.src('./scss/**/*.scss')
+  gulp.src(config.paths.boneless.watch)
     .pipe(scsslint({
-      'config': 'scsslint.yml',
+      'config': 'scsslint.yml'
     }))
     .pipe(scsslint.failReporter('E'));
 });
