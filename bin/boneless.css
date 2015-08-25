@@ -601,12 +601,6 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd; }
 
-th:first-child, td:first-child {
-  padding-left: 0; }
-
-th:last-child, td:last-child {
-  padding-right: 0; }
-
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -762,24 +756,25 @@ table {
 @media only screen and (max-width: 48em) {
   table {
     border: 0; }
-  table thead {
-    display: none; }
-  table tr {
-    display: block;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd; }
-  table td {
-    display: block;
-    font-size: 0.9rem;
-    text-align: right;
-    border-bottom: 1px dotted #ccc; }
-  table td:last-child {
-    border-bottom: 0; }
-  table td::before {
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-    content: attr(data-label); } }
+    table thead {
+      display: none; }
+    table tr {
+      display: block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd; }
+    table tbody td {
+      display: block;
+      font-size: 0.9rem;
+      text-align: right;
+      border-bottom: 1px dotted #ccc; }
+      table tbody td::before {
+        float: left;
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        content: attr(data-label); }
+      table tbody td:last-child {
+        border-bottom: 0; } }
 
 .row::after, .u-cf::after {
   display: table;
