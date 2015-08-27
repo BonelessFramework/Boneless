@@ -1,7 +1,5 @@
 ![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/examples/images/Jelly.png)
 
-[![Things to do](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=todo&title=To%20do)](http://waffle.io/whatsnewsaes/Boneless)
-[![Things in progress](https://badge.waffle.io/whatsnewsaes/Boneless.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/whatsnewsaes/Boneless)
 [![Build Status](https://travis-ci.org/benhinchley/Boneless.svg)](https://travis-ci.org/benhinchley/Boneless)
 
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
@@ -21,7 +19,7 @@ Any and all contributions are welcome, have a look at the [CONTRIBUTING.md](CONT
 
 ## Core team
 * Seth Coelen - [@WhatsNewSaes](https://twitter.com/WhatsNewSaes)
-* Benjamin Hinchley - [@bhinchley](https://twitter.com/BHinchley)
+* Benjamin Hinchley - [@bhinchley](https://twitter.com/bhinchley)
 
 ## Contributor list
 * your name - twitter handle
