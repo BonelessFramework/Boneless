@@ -25,6 +25,7 @@ table {
   }
 }
 
+
 // Responsive Table Support
 $bp-tables: 'only screen and (max-width: #{$medium-up})';
 @include bp($bp-tables) {
@@ -33,28 +34,28 @@ $bp-tables: 'only screen and (max-width: #{$medium-up})';
     border: 0;
 
     thead {
-    display: none;
-  }
+      display: none;
+    }
 
     tr {
-    display: block;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-  }
+      display: block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
 
     tbody {
       td {
-    display: block;
-    font-size: 0.9em;
-    text-align: right;
-    border-bottom: 1px dotted #ccc;
+        display: block;
+        font-size: 0.9em;
+        text-align: right;
+        border-bottom: 1px dotted #ccc;
 
         &::before {
-    float: left;
+          float: left;
           text-align: left;
-    font-weight: bold;
-    text-transform: uppercase;
-    content: attr(data-label);
+          font-weight: bold;
+          text-transform: uppercase;
+          content: attr(data-label);
         }
 
         &:last-child {
@@ -63,5 +64,4 @@ $bp-tables: 'only screen and (max-width: #{$medium-up})';
       }
     }
   }
-
 }
