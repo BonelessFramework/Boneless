@@ -7,6 +7,12 @@
     "url": "https://github.com/whatsnewsaes/Boneless.git"
   },
   "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "doc": "gulp docs",
+    "watch": "gulp watch",
+    "lint": "gulp lint"
+  },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
