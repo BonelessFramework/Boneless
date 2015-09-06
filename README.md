@@ -12,7 +12,7 @@ Boneless is a community driven front-end framework, written in  [Sass](http://sa
  * Make Boneless the largest community driven front-end framework.
 
 ## Installation Instructions
-To use Boneless simply download the zip, clone the repo or install through bower by going `bower install -D boneless-framework` to save it as a development dependency.
+To use Boneless simply download the zip, clone the repo, install through bower by going `bower install -D boneless-framework` to save it as a development dependency or install through npm by going `npm install boneless`.
 
 ## Contribution Guidelines
 Any and all contributions are welcome, have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
