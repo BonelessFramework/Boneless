@@ -4,7 +4,7 @@
   "description": "A Community Driven Front-End Framework",
   "repository": {
     "type": "git",
-    "url": "https://github.com/whatsnewsaes/Boneless.git"
+    "url": "https://github.com/benhinchley/Boneless.git"
   },
   "license": "MIT",
   "scripts": {
