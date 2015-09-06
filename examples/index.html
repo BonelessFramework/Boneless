@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Boneless | A Community Driven Front-end Framework</title>
-  <meta name="description" content="">
+  <meta name="description" content="Boneless is a Sass framework built upon Skeleton css.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Web font -->
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
@@ -12,14 +12,101 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <link rel="stylesheet" href="css/boneless.css">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
+
+
+  <style>
+    .boneless__heading {
+      margin-top: 0.3em;
+      margin-bottom: 0.1em;
+    }
+    .boneless__subheading {
+      margin-bottom: 4.5em;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
+
     <div class="row">
-      <div class="six column">
-        <h2>Responsive Tables</h2>
+      <div class="small-12 columns">
+        <h1 class="boneless__heading">Bonless</h1>
+        <h6 class="boneless__subheading">A comunity driven front-end framework.</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h2>Examples</h2>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h3>Typography</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="#!">commodo consequat</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <ul>
+              <li>List item</li>
+              <li>another list item</li>
+              <li>and just another one for good measure</li>
+            </ul>
+          </div>
+          <div class="small-12 medium-6 columns">
+            <ol>
+              <li>this is an ordered list</li>
+              <li>with a few list items</li>
+              <li>to show you how they look by default</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h4>Code blocks</h4>
+      </div>
+      <div class="small-12 medium-6 columns">
+<pre>
+  <code>
+    // Some javascript
+    var a = 10,
+      b = 30;
+
+    function multiply(x,y) {
+      return x * y;
+    }
+
+    var result = multiply(a,b);
+  </code>
+</pre>
+      </div>
+      <div class="small-12 medium-6 columns">
+<pre>
+  <code>
+    // Some javascript
+    var a = 10,
+      b = 30;
+
+    function multiply(x,y) {
+      return x * y;
+    }
+
+    var result = multiply(a,b);
+  </code>
+</pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h4>Responsive Tables</h4>
         <table>
           <thead>
             <tr>
@@ -52,103 +139,11 @@
         </table>
       </div>
     </div>
+
+
   </div>
 
-  <div class="row">
-    <h1>Mixed Grid</h1>
-    <div class="large-6 columns" style="background-color:brown;">
-      large-6
-      <br>
-      <br>
-      <br>
 
-    </div>
-    <div class="large-6 columns" style="background-color:red;">
-      large-6
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="medium-6 columns" style="background-color:cornflowerblue;">medium-6
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="medium-6 columns" style="background-color:blue;">
-      medium-6
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="small-6 columns" style="background-color:gold;">
-      small-6
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="small-6 columns" style="background-color:yellow;">
-      small-6
-      <br>
-      <br>
-      <br>
-    </div>
-    <h1>Nested Grid</h1>
-    <div class="large-12 columns" style="background:red">
-      large-12
-      <br>
-      <br>
-      <br>
-      <div class="large-6 columns" style="background:yellow">large-6
-        <br>
-        <br>
-        <br>
-        <div class="large-6 columns" style="background:purple">large-6</div>
-        <div class="large-6 columns" style="background:purple">large-6</div>
-      </div>
-      <div class="large-6 columns" style="background:green">large-6
-        <br>
-        <br>
-        <br>
-        <div class="large-6 columns" style="background:maroon;">large-6</div>
-        <div class="large-6 columns" style="background:maroon;">large-6</div>
-      </div>
-    </div>
-    <h1>Offsets</h1>
-
-    <div class="large-5 large-offset-7 columns" style="background-color:yellow;">
-      large-5 large-offset-7
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="medium-5 medium-offset-7 columns" style="background-color:blue;">
-      medium-5 medium-offset-7
-      <br>
-      <br>
-      <br>
-    </div>
-
-    <div class="small-5 small-offset-7 columns" style="background-color:red;">
-      small-5 small-offset-7
-      <br>
-      <br>
-      <br>
-    </div>
-
-    <h1>Push Pull</h1>
-    <div class="large-4 medium-push-8 columns" style="background-color:blue;">
-      large-4 large-push-8
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="large-8 medium-pull-4 columns" style="background-color:red;">
-      large-8 large-pull-4
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
 </body>
 
 </html>
