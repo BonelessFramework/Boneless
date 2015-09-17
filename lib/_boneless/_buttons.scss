@@ -1,7 +1,7 @@
 @import '_buttons/mixins';
 
 @include button($classname: 'btn', $color: $secondary-color);
-@include button($classname: 'btn-primary', $color: $primary-color);
+@include button($classname: 'btn--primary', $color: $primary-color);
 
 button,
 input[type="submit"],

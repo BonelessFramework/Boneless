@@ -58,7 +58,7 @@ ol {
   list-style: decimal inside;
   padding-left: 0;
   margin-top: 0;
-  
+
   ol,
   ul {
     margin: 1.5em 0 1.5em 3em;
@@ -83,7 +83,7 @@ code {
   white-space: nowrap;
   background: lighten($light-grey, 6.4%);
   border: 1px solid $light-grey;
-  border-radius: 4px;
+  border-radius: $radius;
 }
 
 pre > code {

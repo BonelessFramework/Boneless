@@ -75,7 +75,7 @@
 
     // Rounded
     @if $rounded == true {
-      border-radius: 4px;
+      border-radius: $radius;
     } @else if $rounded == false {
       border-radius: 0;
     } @else if $rounded == pill {
