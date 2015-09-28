@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('gulp-autoprefixer'),
   sassdoc = require('sassdoc'),
-  scsslint = require('gulp-scss-lint'),
+  sasslint = require('gulp-sass-lint'),
   header = require('gulp-header'),
   pkg = require('./package.json');
 
@@ -96,8 +96,7 @@ gulp.task('watch', function() {
 // Lint task
 gulp.task('lint', function() {
   gulp.src(config.paths.boneless.watch)
-    .pipe(scsslint({
-      'config': 'scsslint.yml'
-    }))
-    .pipe(scsslint.failReporter('E'));
+    .pipe(sasslint())
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError())
 });

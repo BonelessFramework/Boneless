@@ -1,16 +1,15 @@
 language: node_js
 node_js:
-- '0.12'
-- '0.11'
+  - '4.0.0'
+  - '0.12'
+  - '0.11'
 before_install:
-  - gem install scss-lint
-- gem install sass
-- npm install -g parker node-sass
+  - gem install sass
+  - npm install -g parker node-sass
 install: npm install
 script:
-  - gulp lint
-- node-sass --output-style nested --precision 10 scss/boneless.scss lib/boneless.css
-- sass -t nested --precision 10 -C scss/boneless.scss lib/boneless.css
+  - node-sass --output-style nested --precision 10 scss/boneless.scss lib/boneless.css
+  - sass -t nested --precision 10 -C scss/boneless.scss lib/boneless.css
 after_success:
   - gulp build
   - parker bin/boneless.css

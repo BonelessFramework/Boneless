@@ -4,8 +4,8 @@
 @include button($classname: 'btn--primary', $color: $primary-color);
 
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   @include button($classname: false, $color: $primary-color);
 }

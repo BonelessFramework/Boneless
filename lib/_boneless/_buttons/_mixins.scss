@@ -27,7 +27,7 @@
 /// @todo Add active state styles (currently just the same as hover/focus)
 
 @mixin button($classname: btn, $size: medium, $color: #888, $type: border, $rounded: true) {
-  $output: #{'.' + $classname};
+  $output:  #{'.' + $classname};
 
   @if $classname == false {
     $output: '&';

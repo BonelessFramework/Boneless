@@ -1,6 +1,6 @@
 {
   "name": "boneless",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Community Driven Front-End Framework",
   "repository": {
     "type": "git",
@@ -14,14 +14,14 @@
     "lint": "gulp lint"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-header": "^1.2.2",
-    "gulp-plumber": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-header": "^1.7.1",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.4",
-    "gulp-scss-lint": "^0.1.11",
-    "gulp-sourcemaps": "^1.5.1",
-    "gulp-util": "^3.0.4",
-    "sassdoc": "^2.1.7"
+    "gulp-sass-lint": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "sassdoc": "^2.1.15"
   }
 }

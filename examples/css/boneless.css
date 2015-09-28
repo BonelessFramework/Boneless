@@ -1,10 +1,10 @@
 /**
  * boneless - A Community Driven Front-End Framework
- * @version v0.0.1
+ * @version v1.0.0
  * @license MIT
  */
 html {
-  font-size: 1em;
+  font-size: 16px;
   box-sizing: border-box; }
 
 *,
@@ -674,9 +674,9 @@ pre > code {
   border-color: #0f9cc8; }
 
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -696,31 +696,31 @@ input[type="button"] {
 
 button:hover,
 button:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="button"]:hover,
-input[type="button"]:focus {
+input[type='submit']:hover,
+input[type='submit']:focus,
+input[type='reset']:hover,
+input[type='reset']:focus,
+input[type='button']:hover,
+input[type='button']:focus {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
 
 button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
+input[type='submit']:active,
+input[type='reset']:active,
+input[type='button']:active {
   outline: 0;
   color: #0d89b0;
   border-color: #0f9cc8; }
 
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   min-height: 65px;
   padding-top: 6px;
-  padding-bottom: 6px; }
+  padding-bottom: 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 textarea,
 select {
@@ -736,13 +736,13 @@ select {
     border: 1px solid #33c3f0;
     outline: 0; }
 
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"] {
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'] {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
@@ -752,20 +752,19 @@ input[type="password"] {
   box-sizing: border-box;
   -moz-appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none; }
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus {
+  input[type='email']:focus,
+  input[type='number']:focus,
+  input[type='search']:focus,
+  input[type='text']:focus,
+  input[type='tel']:focus,
+  input[type='url']:focus,
+  input[type='password']:focus {
     border: 1px solid #33c3f0;
     outline: 0; }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   display: inline; }
 
 label,
