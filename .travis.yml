@@ -8,8 +8,8 @@ before_install:
   - npm install -g parker node-sass
 install: npm install
 script:
-  - node-sass --output-style nested --precision 10 scss/boneless.scss lib/boneless.css
-  - sass -t nested --precision 10 -C scss/boneless.scss lib/boneless.css
+  - node-sass --output-style nested --precision 10 boneless.scss bin/boneless.css
+  - sass -t nested --precision 10 -C boneless.scss bin/boneless.css
 after_success:
   - gulp build
   - parker bin/boneless.css
