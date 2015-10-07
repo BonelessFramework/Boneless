@@ -12,7 +12,7 @@ There is a little bit of setup involved, but it isn't all that difficult to get 
 
 **You are now setup and ready to go.**
 
-just run `nr watch` to start working.
+just run `npm run watch` to start working.
 
 ### Working on a feature, bug fix, enhancement etc etc.
 Before you start work on a new feature, make sure you check out the [issues](https://github.com/whatsnewsaes/Boneless/issues) and [pr](https://github.com/whatsnewsaes/Boneless/pulls) tabs, to make sure that someone else isn't working on it, or that it hasn't already been done, and is just waiting to be merged.
