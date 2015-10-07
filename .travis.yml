@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - '4.0.0'
   - '0.12'
-  - '0.11'
 before_install:
   - gem install sass
   - npm install -g parker node-sass
