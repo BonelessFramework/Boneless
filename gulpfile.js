@@ -1,13 +1,14 @@
-var gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  plumber = require('gulp-plumber'),
-  gutil = require('gulp-util'),
-  sourcemaps = require('gulp-sourcemaps'),
-  autoprefixer = require('gulp-autoprefixer'),
-  sassdoc = require('sassdoc'),
-  sasslint = require('gulp-sass-lint'),
-  header = require('gulp-header'),
-  pkg = require('./package.json');
+var gulp = require('gulp')
+var sass = require('gulp-sass')
+var sourcemaps = require('gulp-sourcemaps')
+var autoprefixer = require('gulp-autoprefixer')
+var sassdoc = require('sassdoc')
+var sasslint = require('gulp-sass-lint')
+var header = require('gulp-header')
+var pkg = require('./package.json')
+
+var watch = require('gulp-watch')
+var browserSync = require('browser-sync').create()
 
 var config = {
   paths: {
@@ -15,7 +16,7 @@ var config = {
       src: './boneless.scss',
       dest: './bin',
       examples: './examples/css',
-      watch: './lib/**/**/*.scss'
+      watch: ['./boneless.scss', './lib/**/**/*.scss']
     }
   },
   plugins: {
@@ -32,11 +33,6 @@ var config = {
       options: {
         dest: 'docs',
         basePath: 'https://github.com/benhinchley/Boneless/tree/master/scss',
-        groups: {
-          utility: 'Utility',
-          config: 'Configuration',
-          grid: 'Grid'
-        },
         display: {
           access: 'public'
         }
@@ -48,29 +44,20 @@ var config = {
         ' * @version v<%= pkg.version %>',
         ' * @license <%= pkg.license %>',
         ' */',
-        ''
+        '\n'
       ].join('\n')
     }
   }
-};
-
-function handleError(err) {
-  console.log(err.toString());
-  gutil.beep(); // little beep so you know there's an error
-  this.emit('end');
 }
 
-gulp.task('build', function() {
-  return gulp.src(config.paths.boneless.src)
-    .pipe(plumber({
-      errorHandler: handleError
-    }))
+function buildTask (options) {
+  return gulp.src(options.src)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: config.plugins.sass.outputStyle,
       precision: config.plugins.sass.precision,
       noCache: config.plugins.sass.noCache
-    }))
+    }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: config.plugins.autoprefixer.browsers,
       cascade: config.plugins.autoprefixer.cascade
@@ -79,24 +66,43 @@ gulp.task('build', function() {
       pkg: pkg
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(plumber.stop())
-    .pipe(gulp.dest(config.paths.boneless.dest))
-    .pipe(gulp.dest(config.paths.boneless.examples));
-});
+    .pipe(gulp.dest(options.dest))
+    .pipe(browserSync.stream())
+}
 
-gulp.task('docs', function() {
+gulp.task('build', function () {
+  buildTask({
+    src: config.paths.boneless.src,
+    dest: config.paths.boneless.dest
+  })
+})
+
+gulp.task('docs', function () {
   return gulp.src(config.paths.boneless.watch)
-    .pipe(sassdoc(config.plugins.sassdoc.options));
-});
+    .pipe(sassdoc(config.plugins.sassdoc.options))
+})
 
-gulp.task('watch', function() {
-  gulp.watch(config.paths.boneless.watch, ['build', 'docs']);
-});
+gulp.task('watch', function () {
+  browserSync.init({
+    server: {
+      baseDir: './examples'
+    },
+    logPrefix: 'boneless'
+  })
+
+  watch(config.paths.boneless.watch, function () {
+    buildTask({
+      src: config.paths.boneless.src,
+      dest: config.paths.boneless.examples
+    })
+  })
+  gulp.watch('./examples/*.html').on('change', browserSync.reload)
+})
 
 // Lint task
-gulp.task('lint', function() {
+gulp.task('lint', function () {
   gulp.src(config.paths.boneless.watch)
     .pipe(sasslint())
     .pipe(sasslint.format())
     .pipe(sasslint.failOnError())
-});
+})
