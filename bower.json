@@ -1,34 +1,28 @@
 {
-  "name": "Boneless",
-  "description": "A Community Driven Front-end Framework",
-  "main": "boneless.scss",
-  "homepage": "https://github.com/benhinchley/Boneless",
+  "name": "boneless",
+  "description": "A Community Driven Front-End Framework",
+  "homepage": "https://github.com/BonelessFramework/Boneless",
+  "main": "boneless/boneless.scss",
+  "keywords": [
+    "sass",
+    "boneless",
+    "eyeglass-module"
+  ],
   "authors": [
     "benhinchley <benjaminhinchley@gmail.com>",
     "WhatsNewSaes <scoelen89@gmail.com>"
   ],
-  "keywords": [
-    "skeleton",
-    "boneless",
-    "framework",
-    "css",
-    "sass",
-    "community"
-  ],
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benhinchley/Boneless.git"
+    "url": "https://github.com/BonelessFramework/Boneless.git"
   },
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "bower.json",
     "package.json",
-    "gulpfile.js",
-    "scsslint.yml",
-    "CONTRIBUTING.md",
-    "v2.md"
+    "test"
   ]
 }
