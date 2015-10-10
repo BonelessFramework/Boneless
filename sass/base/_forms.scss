@@ -1,0 +1,57 @@
+fieldset {
+  padding: 1rem;
+  border: 2px solid $gray;
+}
+
+legend {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  font-size: 1.2rem;
+}
+
+label {
+  display: inline-block;
+  padding-bottom: 0.3rem;
+
+  font-size: 0.9rem;
+  line-height: 1.3;
+
+}
+
+input:not([type*='submit']):not([type*='reset']):not([type*='button']) {
+  width: 100%;
+
+  padding-top: 0.5rem;
+  padding-right: 0.3rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.3rem;
+
+  background-color: transparent;
+  border: 1px solid $gray;
+
+  &:focus {
+    outline: $blue solid 2px;
+  }
+
+  &:hover {
+    border-color: $darkGray;
+  }
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: $gray;
+    }
+  }
+
+}
+
+.field-container {
+  margin-bottom: 1.5rem;
+}

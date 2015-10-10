@@ -1,12 +1,9 @@
-# Created by https://www.gitignore.io/api/osx,linux,windows,node,bower
+# Created by https://www.gitignore.io/api/osx,linux,windows,node
 
 ### OSX ###
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
 
 # Thumbnails
 ._*
@@ -88,10 +85,6 @@ build/Release
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
 
-
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
-
+### Eyeglass ###
+.eyeglass_cache
+tmp

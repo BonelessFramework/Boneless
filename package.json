@@ -1,27 +1,27 @@
 {
   "name": "boneless",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Community Driven Front-End Framework",
+  "main": "boneless.scss",
+  "homepage": "https://github.com/BonelessFramework/Boneless",
+  "authors": [
+    "benhinchley <benjaminhinchley@gmail.com>",
+    "WhatsNewSaes <scoelen89@gmail.com>"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/benhinchley/Boneless.git"
+    "url": "https://github.com/BonelessFramework/Boneless.git"
   },
   "license": "MIT",
   "scripts": {
-    "build": "gulp build",
-    "doc": "gulp docs",
-    "watch": "gulp watch",
-    "lint": "gulp lint"
+    "build": "node build"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.1",
-    "gulp-header": "^1.7.1",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.0.4",
-    "gulp-sass-lint": "^1.0.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-util": "^3.0.6",
-    "sassdoc": "^2.1.15"
+    "autoprefixer": "^6.0.3",
+    "breakpoint-sass": "^2.6.1",
+    "eyeglass": "^0.6.2",
+    "eyeglass-math": "^1.0.1",
+    "node-sass": "^3.3.3",
+    "postcss": "^5.0.9"
   }
 }

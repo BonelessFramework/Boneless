@@ -1,0 +1,9 @@
+@mixin _heading-size ($typeScale) {
+  $headings: (h1: 4, h2: 3, h3: 2, h4: 1, h5: -1, h6: -1);
+
+  @each $heading, $exp in $headings {
+    #{$heading} {
+      font-size: roundTo($number: math-pow($typeScale, $exp)) + em;
+    }
+  }
+}

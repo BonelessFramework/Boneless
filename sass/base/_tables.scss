@@ -1,0 +1,66 @@
+table {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid $gray;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+  padding: 0.375rem;
+
+  border: 1px solid $silver;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+
+  text-align: center;
+}
+
+table th {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@include breakpoint($breakpoint-small) {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 0.75rem;
+
+    border-bottom: 2px solid $silver;
+  }
+
+  table td {
+    display: block;
+
+    font-size: 0.9rem;
+    text-align: right;
+
+    border-bottom: 1px solid $silver;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:before {
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    content: attr(data-label);
+  }
+}

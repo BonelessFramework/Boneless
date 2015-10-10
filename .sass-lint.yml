@@ -9,10 +9,7 @@ rules:
   placeholder-in-extend: 1
 
   # Mixins
-  mixins-before-declarations:
-    - 1
-    -
-      exclude: ['bp']
+  mixins-before-declarations: 1
 
   # Line Spacing
   one-declaration-per-line: 1

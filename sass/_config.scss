@@ -1,0 +1,31 @@
+@import '_config/colors';
+
+// -----------------
+// Base variables
+// -----------------
+$baseFontsize: 16px;
+$baseLineHeight: 1.6;
+$bodyFontColor: $darkGray;
+
+
+// -----------------
+// Typography
+// -----------------
+
+// Scales
+// -----------------
+// minorSecond
+// majorSecond
+// minorThird
+// majorThird
+// perfectFourth
+// augmentedFourth
+// perfectFifth
+// goldenRatio
+$headingsScale: augmentedFourth;
+
+
+// -----------------
+// Breakpoints
+// -----------------
+$breakpoint-small: screen (max-width 600px);
