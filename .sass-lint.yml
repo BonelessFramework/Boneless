@@ -1,7 +1,9 @@
 options:
   formatter: stylish
+
 files:
-  include: 'lib/**/*.scss'
+  include: 'boneless/**/*.scss'
+
 rules:
   # Extends
   extends-before-mixins: 1
