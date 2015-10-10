@@ -2,16 +2,11 @@ language: node_js
 node_js:
   - '4.0.0'
   - '0.12'
-before_install:
-  - gem install sass
-  - npm install -g parker node-sass
+before_install: npm install -g parker node-sass eyeglass postcss autoprefixer
 install: npm install
-script:
-  - node-sass --output-style nested --precision 10 boneless.scss bin/boneless.css
-  - sass -t nested --precision 10 -C boneless.scss bin/boneless.css
+script: npm run build
 after_success:
-  - gulp build
-  - parker bin/boneless.css
+  - parker test/boneless.css
 notifications:
   email: false
   slack:
