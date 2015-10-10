@@ -7,6 +7,7 @@ Boneless is a community driven front-end framework, written in  [Sass](http://sa
 ---
 
 **VERSION TWO**
+To run the build just go `npm run build`.
 
 ## License
 Use me, fork me, steal me, build me, share me [open-source MIT license](LICENSE).
