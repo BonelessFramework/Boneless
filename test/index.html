@@ -7,10 +7,159 @@
   <title>Boneless</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="boneless.css">
+
+  <style>
+    .wrapper {
+      margin: 0 auto;
+      max-width: 1240px;
+      width: 94%;
+    }
+    .boneless-title {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Boneless</h1>
+  <div class="wrapper">
+
+
+    <h1 class="boneless-title">Boneless</h1>
+    <blockquote>
+      This file is a testing ground for everything boneless has to offer.
+    </blockquote>
+
+    <hr>
+
+    <h1>Typography</h1>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <blockquote>
+      This is a blockquote.
+    </blockquote>
+
+    <ul>
+      <li>unorded list</li>
+      <li>list item</li>
+      <li>nested ordered list
+        <ol>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ol>
+      </li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>nested unordered list
+        <ul>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ol>
+      <li>ordered list</li>
+      <li>list item</li>
+      <li>nested ordered list
+        <ol>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ol>
+      </li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item
+        <ul>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ul>
+      </li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ol>
+
+    <hr>
+
+    <h1>Tables</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Payment</th>
+          <th>Issue Date</th>
+          <th>Amount</th>
+          <th>Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Payment">Payment #1</td>
+          <td data-label="Issue Date">02/01/2015</td>
+          <td data-label="Amount">$2,311</td>
+          <td data-label="Period">01/01/2015 - 01/31/2015</td>
+        </tr>
+        <tr>
+          <td data-label="Payment">Payment #2</td>
+          <td data-label="Issue Date">03/01/2015</td>
+          <td data-label="Amount">$3,211</td>
+          <td data-label="Period">02/01/2015 - 02/28/2015</td>
+        </tr>
+        <tr>
+          <td data-label="Payment">Payment #3</td>
+          <td data-label="Issue Date">04/01/2015</td>
+          <td data-label="Amount">$4,311</td>
+          <td data-label="Period">03/01/2015 - 03/30/2015</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h1>Forms</h1>
+
+    <form>
+      <fieldset>
+        <legend>Form fields and stuff</legend>
+        <div class="field-container">
+          <label for="textInput">Text Input</label>
+          <input id="textInput" type="text" name="text-input" placeholder="Text input">
+        </div>
+        <div class="field-container">
+          <label for="emailInput">Email Input</label>
+          <input id="emailInput" type="email" name="email-input" placeholder="Email@input">
+        </div>
+        <div class="field-container">
+          <label for="numberInput">Number Input</label>
+          <input id="numberInput" type="number" name="number-input" placeholder="Number input">
+        </div>
+      </fieldset>
+    </form>
+
+    <hr>
+
+
+  </div>
+
 </body>
 
 </html>
