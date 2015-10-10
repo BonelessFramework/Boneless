@@ -2,8 +2,17 @@
   "name": "boneless",
   "version": "2.0.0",
   "description": "A Community Driven Front-End Framework",
-  "main": "boneless.scss",
   "homepage": "https://github.com/BonelessFramework/Boneless",
+  "main": "boneless/boneless.scss",
+  "eyeglass": {
+    "exports": "eyeglass-exports.js",
+    "needs": "^0.6.2"
+  },
+  "keywords": [
+    "sass",
+    "boneless",
+    "eyeglass-module"
+  ],
   "authors": [
     "benhinchley <benjaminhinchley@gmail.com>",
     "WhatsNewSaes <scoelen89@gmail.com>"
@@ -16,11 +25,13 @@
   "scripts": {
     "build": "node build"
   },
+  "dependencies": {
+    "breakpoint-sass": "^2.6.1",
+    "eyeglass-math": "^1.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "breakpoint-sass": "^2.6.1",
     "eyeglass": "^0.6.2",
-    "eyeglass-math": "^1.0.1",
     "node-sass": "^3.3.3",
     "postcss": "^5.0.9"
   }

@@ -9,7 +9,7 @@ var autoprefixer = require('autoprefixer')
 var rootDir = __dirname
 var sassOptions = {
   root: rootDir,
-  file: './sass/boneless.scss',
+  file: './boneless/boneless.scss',
   outputStyle: 'expanded'
 }
 
