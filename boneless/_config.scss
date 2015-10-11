@@ -29,3 +29,8 @@ $headingsScale: augmentedFourth;
 // Breakpoints
 // -----------------
 $breakpoint-small: screen (max-width 600px);
+
+
+// grid
+$grid-active: screen (min-width 600px);
+$total-columns: 12;

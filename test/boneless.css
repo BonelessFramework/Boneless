@@ -64,6 +64,98 @@ ol {
 
 input {
   font-size: inherit;
+  font-family: inherit;
+}
+
+.container, .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.row {
+  padding-top: 1rem;
+}
+
+.column {
+  width: 100%;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.column ~ .column {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .row {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+  .column ~ .column {
+    padding-top: 0;
+  }
+  .column--one {
+    width: 8.33333%;
+  }
+  .column--two {
+    width: 16.66667%;
+  }
+  .column--three {
+    width: 25%;
+  }
+  .column--four {
+    width: 33.33333%;
+  }
+  .column--five {
+    width: 41.66667%;
+  }
+  .column--six {
+    width: 50%;
+  }
+  .column--seven {
+    width: 58.33333%;
+  }
+  .column--eight {
+    width: 66.66667%;
+  }
+  .column--nine {
+    width: 75%;
+  }
+  .column--ten {
+    width: 83.33333%;
+  }
+  .column--eleven {
+    width: 91.66667%;
+  }
+  .column--twelve {
+    width: 100%;
+  }
 }
 
 h1 {
@@ -124,7 +216,7 @@ blockquote {
 
 fieldset {
   padding: 1rem;
-  border: 2px solid #aaa;
+  border: 2px solid #ddd;
 }
 
 legend {
