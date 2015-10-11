@@ -4,7 +4,7 @@ var fs = require('fs')
 var sass = require('node-sass')
 var Eyeglass = require('eyeglass').Eyeglass
 var postcss = require('postcss')
-var autoprefixer = require('autoprefixer')
+var autoprefixer = require('autoprefixer')({cascade: false})
 
 var rootDir = __dirname
 var sassOptions = {
