@@ -1,16 +1,12 @@
 @import '_config/colors';
 
 // -----------------
-// Base variables
-// -----------------
-$baseFontsize: 16px;
-$baseLineHeight: 1.6;
-$bodyFontColor: $darkGray;
-
-
-// -----------------
 // Typography
 // -----------------
+$baseFontSize: 18;
+$baseLineHeight: 1.6;
+$leading: $baseLineHeight * 1rem;
+$bodyFontColor: $darkGray;
 
 // Scales
 // -----------------
@@ -31,6 +27,8 @@ $headingsScale: augmentedFourth;
 $breakpoint-small: screen (max-width 600px);
 
 
-// grid
+// -----------------
+// Grid
+// -----------------
 $grid-active: screen (min-width 600px);
 $total-columns: 12;

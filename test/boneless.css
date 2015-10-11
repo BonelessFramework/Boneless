@@ -1,6 +1,7 @@
 html {
-  font-size: 16px;
+  font-size: 112.5%;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -39,8 +40,8 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 1.25em;
-  line-height: 1.2;
+  margin-bottom: 1.6rem;
+  line-height: 1.6rem;
 }
 
 h5,
@@ -158,28 +159,10 @@ input {
   }
 }
 
-h1 {
-  font-size: 3.998em;
-}
-
-h2 {
-  font-size: 2.827em;
-}
-
-h3 {
-  font-size: 1.999em;
-}
-
-h4 {
-  font-size: 1.414em;
-}
-
-h5 {
-  font-size: 0.707em;
-}
-
-h6 {
-  font-size: 0.707em;
+p {
+  line-height: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
 }
 
 ul {
@@ -190,12 +173,14 @@ ol {
   list-style: decimal inside;
 }
 
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1rem;
+ul,
+ol {
+  margin-bottom: 1.6rem;
+}
+
+ul li,
+ol li {
+  line-height: 1.6rem;
 }
 
 ul ul,
@@ -203,15 +188,65 @@ ol ul {
   list-style: circle inside;
 }
 
-ol ol,
-ul ol {
+ul ol,
+ol ol {
   list-style: lower-alpha inside;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
 
 blockquote {
   padding-left: 1rem;
+  margin-top: 1.6rem;
   margin-left: 0;
-  border-left: 3px solid #aaa;
+  margin-bottom: 1.6rem;
+  line-height: 1.6rem;
+  border-left: 3px solid #ddd;
+}
+
+h1 {
+  font-size: 3.998rem;
+}
+
+h2 {
+  font-size: 2.827rem;
+}
+
+h3 {
+  font-size: 1.999rem;
+}
+
+h4 {
+  font-size: 1.414rem;
+}
+
+h5 {
+  font-size: 0.707rem;
+}
+
+h6 {
+  font-size: 0.707rem;
+}
+
+h1 {
+  margin-bottom: 3.2rem;
+  line-height: 4.8rem;
+}
+
+h2 {
+  margin-bottom: 3.2rem;
+  line-height: 3.2rem;
+}
+
+code {
+  vertical-align: bottom;
 }
 
 fieldset {
@@ -222,7 +257,7 @@ fieldset {
 legend {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 label {
@@ -281,7 +316,7 @@ input:not([type*='submit']):not([type*='reset']):not([type*='button'])[disabled]
 table {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.6rem 0;
   border: 1px solid #aaa;
   border-collapse: collapse;
   border-spacing: 0;

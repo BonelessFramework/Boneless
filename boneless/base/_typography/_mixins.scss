@@ -3,7 +3,7 @@
 
   @each $heading, $exp in $headings {
     #{$heading} {
-      font-size: roundTo($number: math-pow($typeScale, $exp)) + em;
+      font-size: round-to($number: math-pow($typeScale, $exp)) + rem;
     }
   }
 }

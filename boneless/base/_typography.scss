@@ -1,13 +1,13 @@
 @import '_typography/mixins';
 @import '_typography/functions';
 
-@include _heading-size(typeScale($headingsScale));
+// This is based off of typebase.css (http://devinhunt.github.io/typebase.css/)
 
-// p,
-// ul,
-// ol {
-//   max-width: 30em; // This is to improve readability
-// }
+p {
+  line-height: $leading;
+  margin-top: 0;
+  margin-bottom: $leading;
+}
 
 ul {
   list-style: disc inside;
@@ -17,26 +17,54 @@ ol {
   list-style: decimal inside;
 }
 
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1rem;
-}
+ul,
+ol {
+  margin-bottom: $leading;
 
-ul ul,
-ol ul {
-  list-style: circle inside;
-}
+  li {
+    line-height: $leading;
+  }
 
-ol ol,
-ul ol {
-  list-style: lower-alpha inside;
+  ul {
+    list-style: circle inside;
+  }
+
+  ol {
+    list-style: lower-alpha inside;
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
 }
 
 blockquote {
   padding-left: 1rem;
+  margin-top: $leading;
   margin-left: 0;
-  border-left: 3px solid $gray;
+  margin-bottom: $leading;
+
+  line-height: $leading;
+  border-left: 3px solid $silver;
+}
+
+
+@include _heading-size(typeScale($headingsScale));
+
+h1 {
+  margin-bottom: 2 * $leading;
+  line-height: 3 * $leading;
+}
+
+h2 {
+  margin-bottom: 2 * $leading;
+  line-height: 2 * $leading;
+}
+
+
+code {
+  vertical-align: bottom;
 }

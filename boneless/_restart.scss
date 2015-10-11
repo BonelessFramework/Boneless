@@ -1,6 +1,7 @@
 html {
-  font-size: $baseFontsize;
+  font-size: $baseFontSize / 16 * 100%;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -42,8 +43,8 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 1.25em;
-  line-height: 1.2;
+  margin-bottom: $leading;
+  line-height: $leading;
 }
 
 h5,
