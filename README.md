@@ -1,6 +1,6 @@
 ![Boneless Jelly](https://raw.githubusercontent.com/whatsnewsaes/Boneless/master/examples/images/Jelly.png)
 
-[![Build Status](https://travis-ci.org/benhinchley/Boneless.svg)](https://travis-ci.org/benhinchley/Boneless)
+[![Build Status](https://travis-ci.org/BonelessFramework/Boneless.svg?branch=master)](https://travis-ci.org/BonelessFramework/Boneless)
 
 Boneless is a community driven front-end framework, written in  [Sass](http://sass-lang.com/) that takes it's roots from [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). In Boneless there is no set direction of what it has to be, or where it has to go. Boneless is whatever the collective community wants it to be.
 
