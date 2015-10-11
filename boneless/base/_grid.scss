@@ -1,6 +1,6 @@
-@import "_grid/functions";
-@import "_grid/extends";
-@import "_grid/mixins";
+@import '_grid/functions';
+@import '_grid/extends';
+@import '_grid/mixins';
 
 .container {
   @extend %flex-container;

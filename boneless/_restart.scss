@@ -1,5 +1,5 @@
 html {
-  font-size: $baseFontSize / 16 * 100%;
+  font-size: $baseFontSize + px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
@@ -67,6 +67,6 @@ ol {
 }
 
 input {
-  font-size: inherit;
   font-family: inherit;
+  font-size: inherit;
 }

@@ -1,5 +1,5 @@
 html {
-  font-size: 112.5%;
+  font-size: 18px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
@@ -64,8 +64,8 @@ ol {
 }
 
 input {
-  font-size: inherit;
   font-family: inherit;
+  font-size: inherit;
 }
 
 .container, .row {
@@ -160,9 +160,9 @@ input {
 }
 
 p {
-  line-height: 1.6rem;
   margin-top: 0;
   margin-bottom: 1.6rem;
+  line-height: 1.6rem;
 }
 
 ul {
@@ -198,15 +198,15 @@ ul ol,
 ol ul,
 ol ol {
   margin-top: 0;
-  margin-left: 1rem;
   margin-bottom: 0;
+  margin-left: 1rem;
 }
 
 blockquote {
   padding-left: 1rem;
   margin-top: 1.6rem;
-  margin-left: 0;
   margin-bottom: 1.6rem;
+  margin-left: 0;
   line-height: 1.6rem;
   border-left: 3px solid #ddd;
 }

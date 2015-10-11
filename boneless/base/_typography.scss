@@ -4,9 +4,9 @@
 // This is based off of typebase.css (http://devinhunt.github.io/typebase.css/)
 
 p {
-  line-height: $leading;
   margin-top: 0;
   margin-bottom: $leading;
+  line-height: $leading;
 }
 
 ul {
@@ -36,16 +36,16 @@ ol {
   ul,
   ol {
     margin-top: 0;
-    margin-left: 1rem;
     margin-bottom: 0;
+    margin-left: 1rem;
   }
 }
 
 blockquote {
   padding-left: 1rem;
   margin-top: $leading;
-  margin-left: 0;
   margin-bottom: $leading;
+  margin-left: 0;
 
   line-height: $leading;
   border-left: 3px solid $silver;

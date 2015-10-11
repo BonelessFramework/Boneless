@@ -23,7 +23,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "node build"
+    "build": "node build",
+    "lint": "sass-lint -c .sass-lint.yml -v"
   },
   "dependencies": {
     "breakpoint-sass": "^2.6.1",
@@ -33,6 +34,7 @@
     "autoprefixer": "^6.0.3",
     "eyeglass": "^0.6.2",
     "node-sass": "^3.3.3",
-    "postcss": "^5.0.9"
+    "postcss": "^5.0.9",
+    "sass-lint": "^1.2.3"
   }
 }
