@@ -4,6 +4,8 @@
 // This is based off of typebase.css (http://devinhunt.github.io/typebase.css/)
 
 p {
+  max-width: 30rem;
+
   margin-top: 0;
   margin-bottom: $leading;
   line-height: $leading;
