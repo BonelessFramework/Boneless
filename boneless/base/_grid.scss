@@ -1,42 +1,28 @@
 @import '_grid/functions';
-@import '_grid/extends';
 @import '_grid/mixins';
 
 .container {
-  @extend %flex-container;
+  @include _container;
 
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .row {
-  @extend %flex-container;
-
-  padding-top: 1rem;
+  @include _container(false);
 }
 
 .column {
   width: 100%;
 
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: $leading / 2;
+  padding-bottom: $leading;
+  padding-left: $leading / 2;
 
   flex-grow: 1;
   flex-shrink: 1;
-
-  & ~ & {
-    padding-top: 1rem;
-  }
 }
 
 @include breakpoint($grid-active) {
-  .row {
-    flex-flow: row nowrap;
-  }
-
-  .column ~ .column {
-    padding-top: 0;
-  }
-
-  @include _gen-cols($total-columns);
+  @include _gen-cols($total-columns, false);
 };

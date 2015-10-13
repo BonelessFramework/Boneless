@@ -25,10 +25,36 @@ $columns: (
   24: twenty-four
 );
 
-@mixin _gen-cols($total-columns) {
+@mixin _container($wrap: true) {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  @if $wrap == false {
+    @include breakpoint($grid-active) {
+      & {
+        flex-flow: row nowrap;
+      }
+    }
+  }
+}
+
+@mixin _column ($total-columns, $column-number, $is-rigid: false) {
+  @if $is-rigid == false {
+    width: _col-width($total-columns, $column-number);
+  }
+
+  @else if $is-rigid == true {
+    max-width: _col-width($total-columns, $column-number);
+  }
+}
+
+@mixin _gen-cols($total-columns, $is-rigid) {
   @for $i from 1 through $total-columns {
     .column--#{map_get($columns, $i)} {
-      width: _col-width($total-columns, $i);
+      @include _column($total-columns, $i, $is-rigid);
     }
   }
 }
